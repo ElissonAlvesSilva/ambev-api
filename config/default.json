@@ -1,0 +1,11 @@
+{
+  "port": 4001,
+  "host": "0.0.0.0",
+  "log": "info",
+  "timezone": "America/Sao_Paulo",
+  "upload": {
+    "textFile": {
+      "allowedExtensions": ["csv"]
+    }
+  }
+}
