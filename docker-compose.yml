@@ -12,9 +12,9 @@ services:
     volumes:
       - .:/usr/src/app
     command: nodemon server.js
-  redis:
-    image: redis:4.0-alpine
-    volumes:
-      - ./data/redis:/data
-    ports:
-      - "6379:6379"
+  # redis:
+  #   image: redis:4.0-alpine
+  #   volumes:
+  #     - ./data/redis:/data
+  #   ports:
+  #     - "6379:6379"

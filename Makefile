@@ -2,7 +2,7 @@
 
 SHELL := /bin/bash
 branch := $(shell git branch | grep \* | cut -d ' ' -f2)
-CONTAINER_NAME := engage-search-api
+CONTAINER_NAME := ambev-api
 
 build:
 	docker-compose build
