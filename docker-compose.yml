@@ -10,9 +10,21 @@ services:
     volumes:
       - .:/usr/src/app
     command: nodemon server.js
-  # redis:
-  #   image: redis:4.0-alpine
-  #   volumes:
-  #     - ./data/redis:/data
-  #   ports:
-  #     - "6379:6379"
+    depends_on:
+     - database
+    links:
+      - 'database'
+  database:
+    container_name: database
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: YW1iZXY6YW1iZXZQcm9jZXNzMjAyMEBA
+      MYSQL_DATABASE: ambev_development
+      MYSQL_USER: ambev
+      MYSQL_PASSWORD: Amb3v123
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data:
+  notused:

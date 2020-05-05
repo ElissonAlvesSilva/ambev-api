@@ -1,4 +1,4 @@
-require('dotenv').load();
+require('dotenv').config();
 const conf = require('./utils/config');
 
 const port = conf.get('port');

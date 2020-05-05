@@ -1,3 +1,13 @@
 {
-  "environment": "production"
+  "environment": "production",
+  "db": {
+    "type": "mysql",
+    "host": "0.0.0.0",
+    "port": "3308",
+    "database": "ambev",
+    "auth": {
+      "user": "",
+      "password": ""
+    }
+  }
 }

@@ -31,3 +31,6 @@ coverage
 
 # heapdump files
 *.heapsnapshot
+
+# database files
+db/

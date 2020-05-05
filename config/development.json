@@ -1,3 +1,13 @@
 {
-  "environment": "development"
+  "environment": "development",
+  "db": {
+    "dialect": "mysql",
+    "host": "database",
+    "port": "3306",
+    "database": "ambev_development",
+    "auth": {
+      "user": "ambev",
+      "password": "Amb3v123"
+    }
+  }
 }
