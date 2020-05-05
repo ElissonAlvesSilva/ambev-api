@@ -1,0 +1,33 @@
+# Runtime data
+lib-cov
+*.seed
+*.log
+*.csv
+*.out
+*.pid
+*.gz
+*.pyc
+*.DS_Store
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Dotenv
+.env
+
+# data
+data
+
+# coverage
+coverage
+.nyc_output
+
+# heapdump files
+*.heapsnapshot
