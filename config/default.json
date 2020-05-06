@@ -4,8 +4,8 @@
   "log": "info",
   "timezone": "America/Sao_Paulo",
   "upload": {
-    "textFile": {
-      "allowedExtensions": ["csv"]
+    "file": {
+      "allowedExtensions": ["xls", "xlsx", "application/vnd.ms-excel"]
     }
   }
 }
