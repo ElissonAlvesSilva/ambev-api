@@ -1,9 +1,11 @@
 const versionRoute = require('./version');
-const uploadRoute = require('./upload');
+const feedstockRoute = require('./feedstock');
+const contentRoute = require('./content');
 
 const routes = {
   versionRoute,
-  uploadRoute,
+  feedstockRoute,
+  contentRoute,
 };
 
 module.exports = routes;

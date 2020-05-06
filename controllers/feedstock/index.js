@@ -1,13 +1,13 @@
-const upload = require('../../businesses/upload');
+const feedstock = require('../../businesses/feedstock');
 const logger = require('../../utils/logger');
 
-const UploadController = {
+const FeedstockController = {
   async handle(req, res, next) {
     try {
-      const data = await upload.handle(req);
+      const data = await feedstock.handle(req);
       return res.status(data.httpCode).json(data.response);
     } catch (e) {
-      logger.error('Upload Controller:', e.message);
+      logger.error('Feedstock Controller:', e.message);
       logger.debug(e);
 
       // error handler middleware
@@ -16,4 +16,4 @@ const UploadController = {
   },
 };
 
-module.exports = UploadController;
+module.exports = FeedstockController;

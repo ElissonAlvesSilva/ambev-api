@@ -1,12 +1,13 @@
 const { v4: uuidv4 } = require('uuid');
 
 const ResponseError = require('../../utils/error/response-error');
-const conf = require('../../utils/config');
 const FeedstockService = require('../../services/feedstock');
+const { parserFile } = require('../../utils/file');
+const conf = require('../../utils/config');
 
 const acceptedFiles = conf.get('upload:file:allowedExtensions');
 
-const UploadBusinesses = {
+const FeedstockBusinesses = {
   async handle(req) {
     let httpCode = 200;
     let response = '';
@@ -19,7 +20,7 @@ const UploadBusinesses = {
       });
     }
 
-    const file = req.files.mip ? req.files.mip : req.files.volume;
+    const file = req.files.mip;
     if (!acceptedFiles.includes(file.mimetype)) {
       httpCode = 500;
       throw new ResponseError({
@@ -28,13 +29,12 @@ const UploadBusinesses = {
       });
     }
 
-    const type = req.files.mip ? 'mip' : 'volume';
     let fileName = file.name;
     // eslint-disable-next-line max-len
     const ext = fileName.substr((Math.max(0, fileName.lastIndexOf('.')) || Infinity) + 1);
     fileName = `${uuidv4()}.${ext.toLowerCase()}`;
 
-    const uploadPath = `${process.cwd()}/uploads/${type}/${fileName}`;
+    const uploadPath = `${process.cwd()}/uploads/mip/${fileName}`;
 
     try {
       await file.mv(uploadPath);
@@ -45,7 +45,20 @@ const UploadBusinesses = {
       });
     }
 
-    const data = await FeedstockService.process(uploadPath);
+    const parsedFile = parserFile(uploadPath);
+    if (parsedFile.error) {
+      httpCode = 500;
+      response = {
+        message: 'Error to process file',
+        error: parsedFile.message,
+      };
+      return {
+        httpCode,
+        response,
+      };
+    }
+
+    const data = await FeedstockService.process(parsedFile, uploadPath);
     if (data.error) {
       httpCode = 500;
       response = {
@@ -70,4 +83,4 @@ const UploadBusinesses = {
   },
 };
 
-module.exports = UploadBusinesses;
+module.exports = FeedstockBusinesses;

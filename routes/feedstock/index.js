@@ -2,7 +2,7 @@ const { Router } = require('express');
 // const { celebrate } = require('celebrate');
 
 // const joiSchema = require('./validation');
-const UploadController = require('../../controllers/upload');
+const FeedstockController = require('../../controllers/feedstock');
 // const { authMiddleware } = require('../../middlewares/auth');
 
 const router = new Router({ mergeParams: true });
@@ -21,7 +21,7 @@ router.post(
   '/',
   // authMiddleware,
   // validateMiddleware,
-  UploadController.handle,
+  FeedstockController.handle,
 );
 
 module.exports = router;
