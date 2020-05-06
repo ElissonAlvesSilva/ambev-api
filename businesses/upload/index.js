@@ -1,7 +1,8 @@
 const { v4: uuidv4 } = require('uuid');
 
-const ResponseError = require('../../utils/error/request-error');
+const ResponseError = require('../../utils/error/response-error');
 const conf = require('../../utils/config');
+const FeedstockService = require('../../services/feedstock');
 
 const acceptedFiles = conf.get('upload:file:allowedExtensions');
 
@@ -44,8 +45,22 @@ const UploadBusinesses = {
       });
     }
 
+    const data = await FeedstockService.process(uploadPath);
+    if (data.error) {
+      httpCode = 500;
+      response = {
+        message: 'Error to process file',
+        error: data.message,
+      };
+      return {
+        httpCode,
+        response,
+      };
+    }
+
     response = {
-      message: `sucess to upload file: ${file.name}`,
+      message: 'sucess to process file',
+      data,
     };
 
     return {
