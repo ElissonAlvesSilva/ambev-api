@@ -15,6 +15,8 @@ const connected = async (sequelize, _retry) => {
   let retry = _retry;
   try {
     await sequelize.authenticate();
+    await sequelize.sync({ force: true });
+    global.conn = sequelize;
     logger.info('Connection has been established successfully.');
     return true;
   } catch (error) {

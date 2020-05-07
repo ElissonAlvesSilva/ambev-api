@@ -10,7 +10,7 @@ const keysMap = {
   'Texto breve material': 'description',
   'UML': 'uml',
   '   Valor/MObj': 'value_obj',
-  '  Qtd.entr.': 'qtd_amount',
+  '  Qtd.entr.': 'qty_amount',
 };
 
 const emptyKeysMapResponse = {
@@ -24,7 +24,7 @@ const emptyKeysMapResponse = {
   '__EMPTY_8': 'description',
   '__EMPTY_9': 'uml',
   '__EMPTY_10': 'value_obj',
-  '__EMPTY_11': 'qtd_amount',
+  '__EMPTY_11': 'qty_amount',
 };
 
 const emptyKeysMap = {

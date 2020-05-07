@@ -5,7 +5,8 @@ USE ambev_development;
 CREATE TABLE IF NOT EXISTS `kernel` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `key` VARCHAR(10) NOT NULL,
-  `address` TEXT DEFAULT NULL
+  `address` TEXT DEFAULT NULL,
+  UNIQUE KEY(`key`)
 );
 
 CREATE TABLE IF NOT EXISTS `cost_center` (
@@ -13,13 +14,15 @@ CREATE TABLE IF NOT EXISTS `cost_center` (
   `kernel_id` int NOT NULL,
   `key` VARCHAR(30) NOT NULL,
   `address` TEXT DEFAULT NULL,
+  UNIQUE KEY(`key`),
   FOREIGN KEY(kernel_id) REFERENCES kernel(id)
 );
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `name` VARCHAR(50) DEFAULT NULL,
-  `key` VARCHAR(30) NOT NULL
+  `key` VARCHAR(30) NOT NULL,
+  UNIQUE KEY(`key`)
 );
 
 CREATE TABLE IF NOT EXISTS `materials` (
@@ -27,7 +30,8 @@ CREATE TABLE IF NOT EXISTS `materials` (
   `key` INT NOT NULL,
   `description` TEXT NOT NULL,
   `uml` VARCHAR(5) NOT NULL,
-  `qty_amount` DOUBLE DEFAULT NULL
+  `qty_amount` DOUBLE DEFAULT NULL,
+  UNIQUE KEY(`key`)
 );
 
 CREATE TABLE IF NOT EXISTS `mip` (
@@ -51,7 +55,8 @@ CREATE TABLE IF NOT EXISTS `mip` (
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `key` INT NOT NULL,
-  `name` VARCHAR(255) NOT NULL
+  `name` VARCHAR(255) NOT NULL,
+  UNIQUE KEY(`key`)
 );
 
 CREATE TABLE IF NOT EXISTS `volume` (

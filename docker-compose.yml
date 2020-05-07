@@ -19,6 +19,7 @@ services:
     image: mysql:5.7
     volumes:
       - './docker/mysql/dump.sql:/docker-entrypoint-initdb.d/dump.sql'
+      - './docker/mysql/populate.sql:/docker-entrypoint-initdb.d/populate.sql'
     environment:
       MYSQL_ROOT_PASSWORD: YW1iZXY6YW1iZXZQcm9jZXNzMjAyMEBA
       MYSQL_DATABASE: ambev_development
