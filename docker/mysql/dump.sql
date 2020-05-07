@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `mip` (
   `kernel_id` INT NOT NULL,
   `cost_center_id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  `material_id` INT NULL,
+  `material_id` INT DEFAULT NULL,
   `qty_amount` DOUBLE NOT NULL,
   `value_obj` DOUBLE NOT NULL,
   `created_at` DATE NOT NULL,
