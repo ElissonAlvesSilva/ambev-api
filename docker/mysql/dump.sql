@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `mip` (
   `value_obj` DOUBLE NOT NULL,
   `created_at` DATE NOT NULL,
   `updated_at` DATE DEFAULT NULL,
+  UNIQUE KEY(`doc`),
   FOREIGN KEY(kernel_id) REFERENCES kernel(id),
   FOREIGN KEY(cost_center_id) REFERENCES cost_center(id),
   FOREIGN KEY(user_id) REFERENCES users(id),
