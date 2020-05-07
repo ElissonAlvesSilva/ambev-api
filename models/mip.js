@@ -11,7 +11,6 @@ module.exports = function (sequelize, DataTypes) {
     doc: {
       type: DataTypes.BIGINT,
       allowNull: false,
-      unique: true,
     },
     cost_control: {
       type: DataTypes.INTEGER(11),
