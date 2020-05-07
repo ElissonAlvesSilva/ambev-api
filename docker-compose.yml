@@ -17,6 +17,8 @@ services:
   database:
     container_name: database
     image: mysql:5.7
+    volumes:
+      - './docker/mysql/dump.sql:/docker-entrypoint-initdb.d/dump.sql'
     environment:
       MYSQL_ROOT_PASSWORD: YW1iZXY6YW1iZXZQcm9jZXNzMjAyMEBA
       MYSQL_DATABASE: ambev_development
