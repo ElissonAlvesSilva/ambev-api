@@ -1,5 +1,8 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 const moment = require('moment');
+
 const logger = require('../../utils/logger');
 
 const ResponseError = require('../../utils/error/response-error');
@@ -191,6 +194,47 @@ const save = (data) => {
   });
 };
 
+const reprocess = async (data, dates) => {
+  const mips = getConnection('mip');
+
+  if (!dates.length) {
+    return null;
+  }
+
+  const removedDates = [];
+  dates.forEach((date) => {
+    let createdAt = '';
+    createdAt = moment(new Date(date), 'DD/MM/YYYY');
+    createdAt = createdAt.format('YYYY-MM-DD');
+    removedDates.push(createdAt);
+  });
+  let filteredData = '';
+  const response = await mips.destroy({ where: { created_at: removedDates } });
+  if (response > 0) {
+    filteredData = data.filter((item) => {
+      const { created_at } = item;
+      let parsedCreateAt = moment(created_at, 'DD/MM/YYYY');
+      parsedCreateAt = parsedCreateAt.format('YYYY-MM-DD');
+
+      if (removedDates.includes(parsedCreateAt)) {
+        return item;
+      }
+    });
+
+    console.log(filteredData);
+    await save(filteredData);
+  }
+
+  if (response === 0) {
+    throw new ResponseError({
+      code: 0,
+      message: 'Empty data to reprocess',
+    });
+  }
+
+  return filteredData;
+};
+
 const FeedstockService = {
   async process(formattedData, path) {
     let feedstockResponse = '';
@@ -199,6 +243,23 @@ const FeedstockService = {
       const data = FeedstockFormatter(formattedData);
       feedstockResponse = data;
       save(data);
+      deleteFile(path);
+    } catch (error) {
+      logger.info(error);
+      feedstockResponse = {
+        error: true,
+        message: error.message,
+      };
+    }
+
+    return feedstockResponse;
+  },
+  async reProcess(formattedData, path, dates) {
+    let feedstockResponse = '';
+
+    try {
+      const data = FeedstockFormatter(formattedData);
+      feedstockResponse = await reprocess(data, dates);
       deleteFile(path);
     } catch (error) {
       logger.info(error);

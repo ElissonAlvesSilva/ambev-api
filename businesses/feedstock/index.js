@@ -58,17 +58,38 @@ const FeedstockBusinesses = {
       };
     }
 
-    const data = await FeedstockService.process(parsedFile, uploadPath);
-    if (data.error) {
-      httpCode = 500;
-      response = {
-        message: 'Error to process file',
-        error: data.message,
-      };
-      return {
-        httpCode,
-        response,
-      };
+    const { reprocess, dates } = req.query;
+    let data = '';
+    if (reprocess) {
+      const listDates = dates.split(',');
+      // eslint-disable-next-line max-len
+      data = await FeedstockService.reProcess(parsedFile, uploadPath, listDates);
+      if (data.error) {
+        httpCode = 500;
+        response = {
+          message: 'Error to process file',
+          error: data.message,
+        };
+        return {
+          httpCode,
+          response,
+        };
+      }
+    }
+
+    if (!reprocess) {
+      data = await FeedstockService.process(parsedFile, uploadPath);
+      if (data.error) {
+        httpCode = 500;
+        response = {
+          message: 'Error to process file',
+          error: data.message,
+        };
+        return {
+          httpCode,
+          response,
+        };
+      }
     }
 
     response = {
