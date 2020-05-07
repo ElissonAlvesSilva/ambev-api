@@ -136,7 +136,7 @@ const buildFeedstock = async ({
     createdAt = moment(new Date(), 'DD/MM/YYYY');
     createdAt = createdAt.format('YYYY-MM-DD');
   }
-  console.log(createdAt);
+
   if (material) {
     materialId = await processMaterial(material);
   }
