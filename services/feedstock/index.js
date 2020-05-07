@@ -130,11 +130,13 @@ const buildFeedstock = async ({
   const qtyAmount = parseFloat(replaceCurrency(qty_amount));
 
   if (created_at) {
-    createdAt = moment(new Date(created_at), 'YYYY-MM-DD');
+    createdAt = moment(created_at, 'DD/MM/YYYY');
+    createdAt = createdAt.format('YYYY-MM-DD');
   } else {
-    createdAt = moment(new Date(), 'YYYY-MM-DD');
+    createdAt = moment(new Date(), 'DD/MM/YYYY');
+    createdAt = createdAt.format('YYYY-MM-DD');
   }
-  console.log(created_at);
+  console.log(createdAt);
   if (material) {
     materialId = await processMaterial(material);
   }
