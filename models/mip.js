@@ -69,5 +69,20 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'mip',
   });
 
+  Mip.associate = (models) => {
+    Mip.belongsTo(models.kernel, {
+      foreign_key: 'kernel_id',
+    });
+    Mip.belongsTo(models.materials, {
+      foreign_key: 'material_id',
+    });
+    Mip.belongsTo(models.users, {
+      foreign_key: 'user_id',
+    });
+    Mip.belongsTo(models.cost_center, {
+      foreign_key: 'cost_center_id',
+    });
+  };
+
   return Mip;
 };

@@ -28,5 +28,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'cost_center',
   });
 
+  CostCenter.associate = (models) => {
+    CostCenter.belongsTo(models.kernel, {
+      foreign_key: 'kernel_id',
+    });
+  };
+
   return CostCenter;
 };

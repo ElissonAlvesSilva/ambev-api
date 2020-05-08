@@ -20,12 +20,13 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false,
     tableName: 'kernel',
-    classMethods: {
-      associate: (models) => {
-        this.hasMany(models.mip);
-      },
-    },
   });
+
+  Kernels.associate = (models) => {
+    Kernels.hasMany(models.volume, {
+      foreign_key: 'kernel_id',
+    });
+  };
 
   return Kernels;
 };

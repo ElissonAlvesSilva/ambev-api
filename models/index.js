@@ -1,27 +1,26 @@
-/* eslint-disable global-require */
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
 
-const Models = (sequelize, Sequelize) => {
-  const db = {};
+const db = {};
+const sequelize = global.conn;
 
-  db.Sequelize = Sequelize;
-  db.sequelize = sequelize;
+fs
+  .readdirSync(__dirname)
+  // eslint-disable-next-line max-len
+  .filter((file) => (file.indexOf('.') !== 0) && (file !== path.basename(__filename)) && (file.slice(-3) === '.js'))
+  .forEach((file) => {
+    const model = sequelize.import(path.join(__dirname, file));
+    db[model.name] = model;
+  });
 
-  db.cost_center = require('./cost_center')(sequelize, Sequelize);
-  db.kernel = require('./kernel')(sequelize, Sequelize);
-  db.materials = require('./materials')(sequelize, Sequelize);
-  db.mip = require('./mip')(sequelize, Sequelize);
-  db.products = require('./products')(sequelize, Sequelize);
-  db.users = require('./users')(sequelize, Sequelize);
-  db.volume = require('./volume')(sequelize, Sequelize);
+Object.keys(db).forEach((modelName) => {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
 
-  db.kernel.hasMany(db.mip, { as: 'kernel' });
-  db.kernel.hasMany(db.cost_center, { as: 'kernel' });
-  db.kernel.hasMany(db.volume, { as: 'kernel' });
-  db.materials.hasMany(db.mip, { as: 'material' });
-  db.users.hasMany(db.mip, { as: 'user' });
-  db.products.hasMany(db.volume, { as: 'product' });
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
-  return db;
-};
-
-module.exports = Models;
+module.exports = db;

@@ -18,7 +18,7 @@ const router = new Router({ mergeParams: true });
 //   celebrate(schema, joiOptions)(req, res, next);
 // };
 
-router.post(
+router.get(
   '/',
   // authMiddleware,
   // validateMiddleware,

@@ -8,13 +8,14 @@ const environment = conf.get('environment');
 const initialize = require('./controllers/initializers');
 const logger = require('./utils/logger');
 
-const app = require('./app');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 process.env.TZ = conf.get('timezone');
 
 initialize().then(() => {
+  // eslint-disable-next-line global-require
+  const app = require('./app');
   app.listen(port, host, (err) => {
     if (err) {
       logger.error({ error: err });

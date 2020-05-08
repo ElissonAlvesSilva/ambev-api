@@ -20,6 +20,7 @@ const connected = async (sequelize, _retry) => {
     logger.info('Connection has been established successfully.');
     return true;
   } catch (error) {
+    logger.info(error);
     logger.info('Unable to connect to the database:', error);
     if (retry < MAX_RETRY_DATABASE) {
       logger.info(`Retrying to connect to database. Retry count: ${retry}`);
@@ -35,6 +36,9 @@ const initDb = async () => {
     host,
     dialect,
     port,
+    define: {
+      underscored: true,
+    },
   });
 
   await connected(sequelize, 0);

@@ -10,11 +10,16 @@ const { deleteFile } = require('../../utils/file');
 const { getConnection } = require('../../utils/connection-models');
 const { replaceCurrency } = require('../../utils/strings');
 const { FeedstockFormatter } = require('../../formatters/feedstock');
+const {
+  kernel: kernels,
+  materials,
+  users,
+  mip,
+  cost_center: costCenters,
+} = require('../../models');
 
 
-const processConstCenter = async (key, kernel) => {
-  const costCenters = getConnection('cost_center');
-
+const processConstCenter = async (key, kernel_id) => {
   if (!key) {
     return key;
   }
@@ -25,7 +30,7 @@ const processConstCenter = async (key, kernel) => {
     nest: true,
     where: {
       key,
-      kernel_id: kernel,
+      kernel_id,
     },
   });
 
@@ -39,8 +44,6 @@ const processConstCenter = async (key, kernel) => {
 
 
 const processKernel = async (key) => {
-  const kernels = getConnection('kernel');
-
   if (!key) {
     return key;
   }
@@ -63,8 +66,6 @@ const processKernel = async (key) => {
 };
 
 const processUser = async (key) => {
-  const users = getConnection('users');
-
   if (!key) {
     return key;
   }
@@ -87,8 +88,6 @@ const processUser = async (key) => {
 };
 
 const processMaterial = async (key) => {
-  const materials = getConnection('materials');
-
   if (!key) {
     return key;
   }
@@ -122,8 +121,6 @@ const buildFeedstock = async ({
   value_obj,
   qty_amount,
 }) => {
-  const mip = getConnection('mip');
-
   let materialId = '';
   let kernelId = '';
   let userId = '';
@@ -260,6 +257,28 @@ const FeedstockService = {
       const data = FeedstockFormatter(formattedData);
       feedstockResponse = await reprocess(data, dates);
       deleteFile(path);
+    } catch (error) {
+      logger.info(error);
+      feedstockResponse = {
+        error: true,
+        message: error.message,
+      };
+    }
+
+    return feedstockResponse;
+  },
+  async processed() {
+    let feedstockResponse = '';
+
+    try {
+      feedstockResponse = await mip.findAll({
+        include: [
+          { model: kernels },
+          { model: materials },
+          { model: users },
+          { model: costCenters },
+        ],
+      });
     } catch (error) {
       logger.info(error);
       feedstockResponse = {

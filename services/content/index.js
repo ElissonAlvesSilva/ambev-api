@@ -7,19 +7,17 @@ const logger = require('../../utils/logger');
 
 const ResponseError = require('../../utils/error/response-error');
 const { deleteFile } = require('../../utils/file');
-const { getConnection } = require('../../utils/connection-models');
 const { replaceCurrency } = require('../../utils/strings');
 const { ContentFormatter } = require('../../formatters/content');
+const { volume, kernel, products } = require('../../models');
 
 const processKernel = async (key) => {
-  const kernels = getConnection('kernel');
-
   if (!key) {
     return key;
   }
 
   // eslint-disable-next-line no-unused-vars
-  const kernel = await kernels.findOne({
+  const kn = await kernel.findOne({
     raw: true,
     nest: true,
     where: {
@@ -27,17 +25,15 @@ const processKernel = async (key) => {
     },
   });
 
-  if (!kernel) {
+  if (!kn) {
     return null;
   }
 
-  const { id } = kernel;
+  const { id } = kn;
   return id;
 };
 
 const processProduct = async (key) => {
-  const products = getConnection('products');
-
   if (!key) {
     return key;
   }
@@ -60,6 +56,7 @@ const processProduct = async (key) => {
 };
 
 const buildContent = async ({
+  // eslint-disable-next-line no-shadow
   kernel,
   line,
   version,
@@ -77,8 +74,6 @@ const buildContent = async ({
   const volumePc = parseFloat(replaceCurrency(volume_pc));
   const volumeHl = parseFloat(replaceCurrency(volume_hl));
   const qtyAmount = parseFloat(replaceCurrency(qty_amount));
-  const volumes = getConnection('volume');
-
 
   if (created_at) {
     createdAt = moment(created_at, 'DD/MM/YYYY');
@@ -110,7 +105,7 @@ const buildContent = async ({
       volume_hl: volumeHl,
       resource,
     };
-    volumes.create(volumeRequest);
+    volume.create(volumeRequest);
   } catch (error) {
     logger.error(error);
     throw new ResponseError({
@@ -134,8 +129,6 @@ const save = (data) => {
 };
 
 const reprocess = async (data, dates) => {
-  const volumes = getConnection('volume');
-
   if (!dates.length) {
     return null;
   }
@@ -150,7 +143,7 @@ const reprocess = async (data, dates) => {
   let filteredData = '';
 
   // eslint-disable-next-line max-len
-  const response = await volumes.destroy({ where: { created_at: removedDates } });
+  const response = await volume.destroy({ where: { created_at: removedDates } });
 
   if (response > 0) {
     filteredData = data.filter((item) => {
@@ -216,12 +209,10 @@ const ContentService = {
     let contentResponse = '';
 
     try {
-      const volumes = getConnection('volume');
-      const products = getConnection('products');
-      const Products = products.hasMany(volumes);
-      contentResponse = await volumes.findAll({
+      contentResponse = await volume.findAll({
         include: [
-          { model: Products },
+          { model: kernel },
+          { model: products },
         ],
       });
     } catch (error) {

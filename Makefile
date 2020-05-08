@@ -34,6 +34,9 @@ test: lint mocha
 run:
 	docker-compose exec app sh
 
+exec-database:
+	docker exec -it database /bin/bash
+
 ## Version management
 release:
 ifeq ($(branch),master)

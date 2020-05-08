@@ -65,5 +65,14 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'volume',
   });
 
+  Volumes.associate = (models) => {
+    Volumes.belongsTo(models.kernel, {
+      foreign_key: 'kernel_id',
+    });
+    Volumes.belongsTo(models.products, {
+      foreign_key: 'product_id',
+    });
+  };
+
   return Volumes;
 };
