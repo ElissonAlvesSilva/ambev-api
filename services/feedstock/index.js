@@ -204,7 +204,7 @@ const reprocess = async (data, dates) => {
   const removedDates = [];
   dates.forEach((date) => {
     let createdAt = '';
-    createdAt = moment(new Date(date), 'DD/MM/YYYY');
+    createdAt = moment(date, 'DD/MM/YYYY');
     createdAt = createdAt.format('YYYY-MM-DD');
     removedDates.push(createdAt);
   });
@@ -221,7 +221,6 @@ const reprocess = async (data, dates) => {
       }
     });
 
-    console.log(filteredData);
     await save(filteredData);
   }
 

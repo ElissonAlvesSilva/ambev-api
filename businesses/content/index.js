@@ -2,6 +2,7 @@ const { v4: uuidv4 } = require('uuid');
 
 const ResponseError = require('../../utils/error/response-error');
 const { parserFile } = require('../../utils/file');
+const ContentService = require('../../services/content');
 const conf = require('../../utils/config');
 
 const acceptedFiles = conf.get('upload:file:allowedExtensions');
@@ -57,8 +58,43 @@ const ContentBusinesses = {
       };
     }
 
+    const { reprocess, dates } = req.query;
+    let data = '';
+    if (reprocess) {
+      const listDates = dates.split(',');
+      // eslint-disable-next-line max-len
+      data = await ContentService.reProcess(parsedFile, uploadPath, listDates);
+      if (data.error) {
+        httpCode = 500;
+        response = {
+          message: 'Error to process file',
+          error: data.message,
+        };
+        return {
+          httpCode,
+          response,
+        };
+      }
+    }
+
+    if (!reprocess) {
+      data = await ContentService.process(parsedFile, uploadPath);
+      if (data.error) {
+        httpCode = 500;
+        response = {
+          message: 'Error to process file',
+          error: data.message,
+        };
+        return {
+          httpCode,
+          response,
+        };
+      }
+    }
+
     response = {
       message: 'sucess to process file',
+      data,
     };
 
     return {
