@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
-module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('mip', {
+module.exports = (sequelize, DataTypes) => {
+  const Mip = sequelize.define('mip', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -68,4 +68,6 @@ module.exports = function (sequelize, DataTypes) {
     timestamps: false,
     tableName: 'mip',
   });
+
+  return Mip;
 };

@@ -1,7 +1,5 @@
-/* jshint indent: 2 */
-
-module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('cost_center', {
+module.exports = (sequelize, DataTypes) => {
+  const CostCenter = sequelize.define('cost_center', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -29,4 +27,6 @@ module.exports = function (sequelize, DataTypes) {
     timestamps: false,
     tableName: 'cost_center',
   });
+
+  return CostCenter;
 };

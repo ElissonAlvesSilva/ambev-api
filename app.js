@@ -6,6 +6,8 @@ const {
   versionRoute,
   feedstockRoute,
   contentRoute,
+  contentProcessedRoute,
+  feedstockProcessedRoute,
 } = require('./routes');
 
 
@@ -17,6 +19,10 @@ app.use('/version', versionRoute);
 app.use('/ambevapi/feedstock', feedstockRoute);
 
 app.use('/ambevapi/content', contentRoute);
+
+app.use('/ambevapi/content-processed', contentProcessedRoute);
+
+app.use('/ambevapi/feedstock-processed', feedstockProcessedRoute);
 
 app.use(errorHandler);
 

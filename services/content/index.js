@@ -212,6 +212,28 @@ const ContentService = {
 
     return contentResponse;
   },
+  async processed() {
+    let contentResponse = '';
+
+    try {
+      const volumes = getConnection('volume');
+      const products = getConnection('products');
+      const Products = products.hasMany(volumes);
+      contentResponse = await volumes.findAll({
+        include: [
+          { model: Products },
+        ],
+      });
+    } catch (error) {
+      logger.info(error);
+      contentResponse = {
+        error: true,
+        message: error.message,
+      };
+    }
+
+    return contentResponse;
+  },
 };
 
 module.exports = ContentService;

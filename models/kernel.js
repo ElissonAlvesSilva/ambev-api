@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
-module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('kernel', {
+module.exports = (sequelize, DataTypes) => {
+  const Kernels = sequelize.define('kernel', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -20,5 +20,12 @@ module.exports = function (sequelize, DataTypes) {
   }, {
     timestamps: false,
     tableName: 'kernel',
+    classMethods: {
+      associate: (models) => {
+        this.hasMany(models.mip);
+      },
+    },
   });
+
+  return Kernels;
 };
