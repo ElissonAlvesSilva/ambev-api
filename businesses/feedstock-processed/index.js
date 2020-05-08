@@ -8,8 +8,8 @@ const FeedstockProcessedBusinessess = {
     let response = '';
     let httpCode = 200;
 
-
-    response = await feedstockService.processed();
+    const { query } = req;
+    response = await feedstockService.processed(query);
     if (response.error) {
       httpCode = 500;
       response = {

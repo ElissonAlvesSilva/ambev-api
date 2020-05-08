@@ -205,16 +205,31 @@ const ContentService = {
 
     return contentResponse;
   },
-  async processed() {
+  async processed({ page = 1, pageSize = 10 }) {
     let contentResponse = '';
+    const offset = page * pageSize;
+    const limit = pageSize;
 
     try {
-      contentResponse = await volume.findAll({
+      const count = await volume.count();
+      const response = await volume.findAll({
         include: [
           { model: kernel },
           { model: products },
         ],
+        order: [
+          ['created_at', 'DESC'],
+        ],
+        limit,
+        offset,
       });
+
+      contentResponse = {
+        data: response,
+        limit: pageSize,
+        page,
+        total: count,
+      };
     } catch (error) {
       logger.info(error);
       contentResponse = {

@@ -8,8 +8,8 @@ const ContentProcessedBusinessess = {
     let response = '';
     let httpCode = 200;
 
-
-    response = await ContentService.processed();
+    const { query } = req;
+    response = await ContentService.processed(query);
     if (response.error) {
       httpCode = 500;
       response = {

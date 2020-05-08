@@ -267,18 +267,33 @@ const FeedstockService = {
 
     return feedstockResponse;
   },
-  async processed() {
+  async processed({ page = 1, pageSize = 10 }) {
     let feedstockResponse = '';
+    const offset = page * pageSize;
+    const limit = pageSize;
 
     try {
-      feedstockResponse = await mip.findAll({
+      const count = await mip.count();
+      const response = await mip.findAll({
         include: [
           { model: kernels },
           { model: materials },
           { model: users },
           { model: costCenters },
         ],
+        order: [
+          ['created_at', 'DESC'],
+        ],
+        limit,
+        offset,
       });
+
+      feedstockResponse = {
+        data: response,
+        limit: pageSize,
+        page,
+        total: count,
+      };
     } catch (error) {
       logger.info(error);
       feedstockResponse = {
