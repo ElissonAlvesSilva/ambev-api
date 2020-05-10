@@ -2,6 +2,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 const moment = require('moment');
+const { Op } = require('sequelize');
 
 const logger = require('../../utils/logger');
 
@@ -205,30 +206,49 @@ const ContentService = {
 
     return contentResponse;
   },
-  async processed({ page = 1, pageSize = 10 }) {
+  async processed({
+    startDate = '', endDate = '', page = 1, pageSize = 10,
+  }) {
     let contentResponse = '';
-    const offset = page * pageSize;
-    const limit = pageSize;
+    let offset = 0;
+    const limit = 10;
+    let where = {};
+    if (startDate && endDate) {
+      where = {
+        created_at: {
+          [Op.gt]: new Date(startDate),
+          [Op.lt]: new Date(endDate),
+        },
+      };
+    }
 
     try {
-      const count = await volume.count();
-      const response = await volume.findAll({
-        include: [
-          { model: kernel },
-          { model: products },
-        ],
-        order: [
-          ['created_at', 'DESC'],
-        ],
-        limit,
-        offset,
-      });
+      const data = await volume.findAndCountAll();
+      let response = '';
+      let pages = 0;
+
+      if (data) {
+        offset = limit * (page - 1);
+        pages = Math.ceil(data.count / limit);
+        response = await volume.findAll({
+          include: [
+            { model: kernel },
+            { model: products },
+          ],
+          order: [
+            ['created_at', 'DESC'],
+          ],
+          limit,
+          offset,
+          where,
+        });
+      }
 
       contentResponse = {
         data: response,
         limit: pageSize,
         page,
-        total: count,
+        pages,
       };
     } catch (error) {
       logger.info(error);

@@ -2,6 +2,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 const moment = require('moment');
+const { Op } = require('sequelize');
 
 const logger = require('../../utils/logger');
 
@@ -267,32 +268,52 @@ const FeedstockService = {
 
     return feedstockResponse;
   },
-  async processed({ page = 1, pageSize = 10 }) {
+  async processed({
+    startDate = '', endDate = '', page = 1, pageSize = 10,
+  }) {
     let feedstockResponse = '';
-    const offset = page * pageSize;
-    const limit = pageSize;
+    let offset = 0;
+    let where = {};
+
+    const limit = 10;
+    if (startDate && endDate) {
+      where = {
+        created_at: {
+          [Op.gt]: new Date(startDate),
+          [Op.lt]: new Date(endDate),
+        },
+      };
+    }
 
     try {
-      const count = await mip.count();
-      const response = await mip.findAll({
-        include: [
-          { model: kernels },
-          { model: materials },
-          { model: users },
-          { model: costCenters },
-        ],
-        order: [
-          ['created_at', 'DESC'],
-        ],
-        limit,
-        offset,
-      });
+      const data = await mip.findAndCountAll();
+      let response = '';
+      let pages = 0;
+
+      if (data) {
+        offset = limit * (page - 1);
+        pages = Math.ceil(data.count / limit);
+        response = await mip.findAll({
+          include: [
+            { model: kernels },
+            { model: materials },
+            { model: users },
+            { model: costCenters },
+          ],
+          order: [
+            ['created_at', 'DESC'],
+          ],
+          limit,
+          offset,
+          where,
+        });
+      }
 
       feedstockResponse = {
         data: response,
         limit: pageSize,
         page,
-        total: count,
+        pages,
       };
     } catch (error) {
       logger.info(error);
