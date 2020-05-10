@@ -223,7 +223,7 @@ const ContentService = {
     }
 
     try {
-      const data = await volume.findAndCountAll();
+      const data = await volume.findAndCountAll({ where });
       let response = '';
       let pages = 0;
 

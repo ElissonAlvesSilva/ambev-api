@@ -1,22 +1,11 @@
-const { Sequelize } = require('sequelize');
+const { sequelize } = require('../../models');
 const logger = require('../../utils/logger');
-const conf = require('../../utils/config');
 const { MAX_RETRY_DATABASE } = require('../../utils/constants');
 
-const host = conf.get('db:host');
-const dialect = conf.get('db:dialect');
-const port = conf.get('db:port');
-const database = conf.get('db:database');
-const username = conf.get('db:auth:user');
-const password = conf.get('db:auth:password');
-
-
-const connected = async (sequelize, _retry) => {
+const initDb = async (_retry = 0) => {
   let retry = _retry;
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ force: true });
-    global.conn = sequelize;
     logger.info('Connection has been established successfully.');
     return true;
   } catch (error) {
@@ -25,23 +14,10 @@ const connected = async (sequelize, _retry) => {
     if (retry < MAX_RETRY_DATABASE) {
       logger.info(`Retrying to connect to database. Retry count: ${retry}`);
       retry += 1;
-      setTimeout(() => connected(sequelize, retry), 20000);
+      setTimeout(() => initDb(sequelize, retry), 20000);
     }
     return false;
   }
-};
-
-const initDb = async () => {
-  const sequelize = new Sequelize(database, username, password, {
-    host,
-    dialect,
-    port,
-    define: {
-      underscored: true,
-    },
-  });
-
-  await connected(sequelize, 0);
 };
 
 module.exports = initDb;

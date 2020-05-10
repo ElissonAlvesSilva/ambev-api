@@ -1,9 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
+const conf = require('../utils/config');
+
+const host = conf.get('db:host');
+const dialect = conf.get('db:dialect');
+const port = conf.get('db:port');
+const database = conf.get('db:database');
+const username = conf.get('db:auth:user');
+const password = conf.get('db:auth:password');
 
 const db = {};
-const sequelize = global.conn;
+const sequelize = new Sequelize(database, username, password, {
+  host,
+  dialect,
+  port,
+  define: {
+    underscored: true,
+  },
+});
 
 fs
   .readdirSync(__dirname)
