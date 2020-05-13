@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `mip_base` (
   `cost_center` VARCHAR(30),
   `user` VARCHAR(255),
   `material` VARCHAR(50),
-  `description` TEXT DEFAULT NULL.
+  `description` TEXT DEFAULT NULL,
   `uml` VARCHAR(5) NOT NULL,
   `qty_amount` DOUBLE NOT NULL,
   `value_obj` DOUBLE NOT NULL,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `volume_base` (
   `update_at` DATE DEFAULT NULL,
   `kernel` VARCHAR(30),
   `product` VARCHAR(255),
-  `description` TEXT DEFAULT NULL.
+  `description` TEXT DEFAULT NULL,
   `volume_pc` DOUBLE NOT NULL,
   `um` VARCHAR(5) NOT NULL,
   `qty_amount` DOUBLE NOT NULL,
