@@ -75,3 +75,31 @@ CREATE TABLE IF NOT EXISTS `volume` (
   FOREIGN KEY(kernel_id) REFERENCES kernel(id),
   FOREIGN KEY(product_id) REFERENCES products(id)
 );
+
+CREATE TABLE IF NOT EXISTS `mip_base` (
+  `id` int PRIMARY KEY AUTO_INCREMENT, 
+  `doc` BIGINT NOT NULL, 
+  `cost_control` INT NOT NULL,
+  `kernel` VARCHAR(30),
+  `cost_center` VARCHAR(30),
+  `user` VARCHAR(255),
+  `material` VARCHAR(50),
+  `qty_amount` DOUBLE NOT NULL,
+  `value_obj` DOUBLE NOT NULL,
+  `created_at` DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `volume_base` (
+  `id` int PRIMARY KEY AUTO_INCREMENT, 
+  `line` INT DEFAULT NULL,
+  `version` INT DEFAULT NULL,
+  `created_at` DATE NOT NULL,
+  `update_at` DATE DEFAULT NULL,
+  `kernel` VARCHAR(30),
+  `product` VARCHAR(255),
+  `volume_pc` DOUBLE NOT NULL,
+  `um` VARCHAR(5) NOT NULL,
+  `qty_amount` DOUBLE NOT NULL,
+  `volume_hl` DOUBLE NOT NULL,
+  `resource` VARCHAR(30)
+);
