@@ -106,3 +106,37 @@ CREATE TABLE IF NOT EXISTS `volume_base` (
   `volume_hl` DOUBLE NOT NULL,
   `resource` VARCHAR(30)
 );
+
+CREATE TABLE IF NOT EXISTS `mip_result` (
+  `id` int PRIMARY KEY AUTO_INCREMENT, 
+  `doc` BIGINT DEFAULT NULL, 
+  `cost_control` INT DEFAULT NULL,
+  `kernel` VARCHAR(30) DEFAULT NULL,
+  `cost_center` VARCHAR(30) DEFAULT NULL,
+  `user` VARCHAR(255) DEFAULT NULL,
+  `material` VARCHAR(50) DEFAULT NULL,
+  `description` TEXT DEFAULT NULL,
+  `uml` VARCHAR(5) DEFAULT NULL,
+  `qty_amount` DOUBLE DEFAULT NULL,
+  `value_obj` DOUBLE DEFAULT NULL,
+  `created_at` DATE NOT NULL,
+  `total` DOUBLE DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `volume_result` (
+  `id` int PRIMARY KEY AUTO_INCREMENT, 
+  `line` INT DEFAULT NULL,
+  `version` INT DEFAULT NULL,
+  `created_at` DATE NOT NULL,
+  `kernel` VARCHAR(30) DEFAULT NULL,
+  `product` VARCHAR(255) DEFAULT NULL,
+  `description` TEXT DEFAULT NULL,
+  `volume_pc` DOUBLE DEFAULT NULL,
+  `um` VARCHAR(5) DEFAULT NULL,
+  `qty_amount` DOUBLE DEFAULT NULL,
+  `volume_hl` DOUBLE DEFAULT NULL,
+  `resource` VARCHAR(30) DEFAULT NULL,
+  `total_pc` DOUBLE DEFAULT NULL,
+  `total_qty` DOUBLE DEFAULT NULL,
+  `total_hl` DOUBLE DEFAULT NULL
+);
