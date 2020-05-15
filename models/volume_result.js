@@ -52,6 +52,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(30),
       allowNull: true,
     },
+    kpi_name: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
     total_pc: {
       type: 'DOUBLE',
       allowNull: true,
@@ -66,6 +70,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     tableName: 'volume_result',
+    timestamps: false,
   });
   return VolumeResult;
 };

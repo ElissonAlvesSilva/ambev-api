@@ -120,6 +120,7 @@ CREATE TABLE IF NOT EXISTS `mip_result` (
   `qty_amount` DOUBLE DEFAULT NULL,
   `value_obj` DOUBLE DEFAULT NULL,
   `created_at` DATE NOT NULL,
+  `kpi_name` VARCHAR(255) DEFAULT NULL,
   `total` DOUBLE DEFAULT NULL
 );
 
@@ -136,6 +137,7 @@ CREATE TABLE IF NOT EXISTS `volume_result` (
   `qty_amount` DOUBLE DEFAULT NULL,
   `volume_hl` DOUBLE DEFAULT NULL,
   `resource` VARCHAR(30) DEFAULT NULL,
+  `kpi_name` VARCHAR(255) DEFAULT NULL,
   `total_pc` DOUBLE DEFAULT NULL,
   `total_qty` DOUBLE DEFAULT NULL,
   `total_hl` DOUBLE DEFAULT NULL

@@ -5,9 +5,13 @@ const { applyMiddlewares } = require('./middlewares/index');
 const {
   versionRoute,
   feedstockRoute,
+  feedstockProcessedRoute,
+  feedstockResultsRoute,
+  feedstockResultsDataRoute,
   contentRoute,
   contentProcessedRoute,
-  feedstockProcessedRoute,
+  contentResultsRoute,
+  contentResultsDataRoute,
 } = require('./routes');
 
 
@@ -18,11 +22,20 @@ app.use('/version', versionRoute);
 
 app.use('/ambevapi/feedstock', feedstockRoute);
 
+app.use('/ambevapi/feedstock-processed', feedstockProcessedRoute);
+
+app.use('/ambevapi/feedstock-results', feedstockResultsRoute);
+
+app.use('/ambevapi/feedstock-results-data', feedstockResultsDataRoute);
+
 app.use('/ambevapi/content', contentRoute);
 
 app.use('/ambevapi/content-processed', contentProcessedRoute);
 
-app.use('/ambevapi/feedstock-processed', feedstockProcessedRoute);
+app.use('/ambevapi/content-results', contentResultsRoute);
+
+app.use('/ambevapi/content-results-data', contentResultsDataRoute);
+
 
 app.use(errorHandler);
 

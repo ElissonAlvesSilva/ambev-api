@@ -52,12 +52,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATEONLY,
       allowNull: false,
     },
+    kpi_name: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+    },
     total: {
       type: 'DOUBLE',
       allowNull: true,
     },
   }, {
     tableName: 'mip_result',
+    timestamps: false,
   });
 
   return MipResult;

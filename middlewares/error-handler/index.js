@@ -9,7 +9,7 @@ function errorHandler(err, req, res, next) { // eslint-disable-line
       message: err.details[0].message,
     });
   }
-
+  console.log(err);
   if (
     err instanceof SyntaxError
     && err.statusCode === 400
