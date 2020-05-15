@@ -1,4 +1,6 @@
 /* eslint-disable camelcase */
+const { Op } = require('sequelize');
+
 const logger = require('../../utils/logger');
 
 const ResponseError = require('../../utils/error/response-error');
@@ -45,12 +47,45 @@ const buildContentResults = async (params, kpi_name, date) => {
   return response;
 };
 
+const getResults = async (kpi, startDate, endDate) => {
+  let where = {};
+
+  if (startDate && endDate) {
+    where = {
+      kpi_name: kpi,
+      created_at: {
+        [Op.gte]: new Date(startDate),
+        [Op.lte]: new Date(endDate),
+      },
+    };
+  }
+
+  const response = await volume_result.findAll({ where });
+  return response;
+};
+
 const ContentResultsService = {
   async create(params, kpi_name, date) {
     let response = '';
 
     try {
       const data = buildContentResults(params, kpi_name, date);
+      response = data;
+    } catch (error) {
+      logger.info(error);
+      response = {
+        error: true,
+        message: error.message,
+      };
+    }
+
+    return response;
+  },
+  async get(kpi, { startDate, endDate }) {
+    let response = '';
+
+    try {
+      const data = getResults(kpi, startDate, endDate);
       response = data;
     } catch (error) {
       logger.info(error);

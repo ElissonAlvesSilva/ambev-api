@@ -19,7 +19,7 @@ const router = new Router({ mergeParams: true });
 // };
 
 router.get(
-  '/{kpi_name}/{date}',
+  '/:kpi_name',
   // authMiddleware,
   // validateMiddleware,
   ContentResultsDataController.handle,
