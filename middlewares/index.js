@@ -6,9 +6,6 @@ const expressPinoLogger = require('express-pino-logger');
 const fileUpload = require('express-fileupload');
 const logger = require('../utils/logger');
 
-// const normalizeQueryParams = require('./normalize-query-params');
-// const normalizeBodyParams = require('./normalize-body-params');
-
 const expressPino = expressPinoLogger({ logger });
 
 const applyMiddlewares = (app) => {
@@ -19,8 +16,6 @@ const applyMiddlewares = (app) => {
   app.use(bodyParser.json({ limit: '5mb' }));
   app.use(bodyParser.json());
   app.use(fileUpload());
-  // app.use(normalizeQueryParams());
-  // app.use(normalizeBodyParams());
 };
 
 module.exports = { applyMiddlewares };
