@@ -3,8 +3,10 @@ const { throwBadRequest } = require('../../utils/error/bad-request');
 
 module.exports = {
   query: Joi.object().keys({
-    reprocess: Joi.boolean(),
-    dates: Joi.string(),
+    startDate: Joi.date(),
+    endDate: Joi.date(),
+    page: Joi.number(),
+    pageSize: Joi.number(),
   }).error((errors) => {
     if (errors[0]) {
       let fields = [];

@@ -6,10 +6,10 @@ function errorHandler(err, req, res, next) { // eslint-disable-line
   if (isCelebrate(err)) {
     return errorFormatter.badRequestResponse(res, {
       err,
-      message: err.details[0].message,
+      message: err.message,
     });
   }
-  console.log(err);
+
   if (
     err instanceof SyntaxError
     && err.statusCode === 400
