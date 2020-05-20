@@ -29,9 +29,22 @@ CREATE TABLE IF NOT EXISTS `materials` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `key` INT NOT NULL,
   `description` TEXT NOT NULL,
-  `uml` VARCHAR(5) NOT NULL,
-  `qty_amount` DOUBLE DEFAULT NULL,
-  UNIQUE KEY(`key`)
+  `uml` VARCHAR(5) DEFAULT NULL,
+  `uml_sap` VARCHAR(5) DEFAULT NULL,
+  `qty_amount` DOUBLE DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `cbz` (
+  `id` int PRIMARY KEY AUTO_INCREMENT, 
+  `name` TEXT DEFAULT NULL,
+  `name_sap` TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `materials_cbz` (
+  `material_id` INT,
+  `cbz_id` INT,
+  FOREIGN KEY(material_id) REFERENCES materials(id),
+  FOREIGN KEY(cbz_id) REFERENCES cbz(id)
 );
 
 CREATE TABLE IF NOT EXISTS `mip` (
@@ -56,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `key` INT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
-  UNIQUE KEY(`key`)
+  `category` VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `volume` (
@@ -142,3 +155,30 @@ CREATE TABLE IF NOT EXISTS `volume_result` (
   `total_qty` DOUBLE DEFAULT NULL,
   `total_hl` DOUBLE DEFAULT NULL
 );
+
+/*
+  type = 1 Volume PLAN
+  type = 2 Quantidade PLAN
+  type = 3 Preço PLAN
+
+CREATE TABLE IF NOT EXISTS `cbz_plan` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT,
+  `type` INT NOT NULL,
+  `year` INT DEFAULT NULL,
+  `month` INT NOT NULL,
+  `qty_plan` DOUBLE DEFAULT NULL,
+  `price_plan` DOUBLE DEFAULT NULL,
+  `year_plan` DOUBLE DEFAULT NULL,
+  `cbz_id` INT DEFAULT NULL,
+  FOREIGN KEY(cbz_id) REFERENCES cbz(id)
+);
+
+CREATE TABLE IF NOT EXISTS `cost_effect` (
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `kernel` VARCHAR(30) DEFAULT NULL,
+  `cbz_category` VARCHAR(255) DEFAULT NULL,
+  `name` TEXT DEFAULT NULL,
+  `result` DOUBLE DEFAULT NULL
+);
+
+*/

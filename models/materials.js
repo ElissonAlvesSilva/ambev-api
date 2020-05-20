@@ -11,15 +11,14 @@ module.exports = (sequelize, DataTypes) => {
     key: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      unique: true,
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     uml: {
       type: DataTypes.STRING(5),
-      allowNull: false,
+      allowNull: true,
     },
     qty_amount: {
       type: 'DOUBLE',

@@ -4,6 +4,7 @@ const errorHandler = require('./middlewares/error-handler');
 const { applyMiddlewares } = require('./middlewares/index');
 const {
   versionRoute,
+  materialsRoute,
   feedstockRoute,
   feedstockProcessedRoute,
   feedstockResultsRoute,
@@ -19,6 +20,8 @@ const app = express();
 applyMiddlewares(app);
 
 app.use('/version', versionRoute);
+
+app.use('/ambevapi/materials', materialsRoute);
 
 app.use('/ambevapi/feedstock', feedstockRoute);
 

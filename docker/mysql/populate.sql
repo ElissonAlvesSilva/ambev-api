@@ -158,315 +158,640 @@ INSERT INTO `users` (`id`, `name`, `key`) VALUES(39, '', '99814094');
 INSERT INTO `users` (`id`, `name`, `key`) VALUES(40, '', '99774985');
 INSERT INTO `users` (`id`, `name`, `key`) VALUES(41, '', '99788542');
 
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(1, '50008037', 'SODA CAUSTICA;LIQUIDO;A GRANEL', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(2, '50008333', 'FLOCULANTE;WHIRLFLOC T QUEST', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(3, '50141234', 'DESINFETANTE;ECOLAB/OXONIAATIVO15020L', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(4, '50142720', 'DETERGENTE;AC-55;BOMBONA;ECOLAB/75781', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(5, '50142722', 'DETERGENTE;ALC;TOPAX;ECOLAB/77481', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(6, '50142891', 'DETERGENTE;LIQ;ECOLAB/LIKBESPECIAL68KG', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(7, '50142724', 'DETERGENTE;BIG BLUE;ECOLAB/44081', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(8, '50142718', 'DETERGENTE;NEUTR;NEXOBIL;ECOLAB/84581', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(9, '50001608', 'TERRA INFUSORIA;HYFLO SUPER CEL', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(10, '50001616', 'TERRA INFUSORIA;STANDARD SUPER CEL', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(11, '50113317', 'ESTABILIZANTE;POLYCLAR 10;;POLYCLAR 10 I', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(12, '50041247', 'CLORO;PASTILHA;BALDE;. KG;;ELGICID BIOC', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(13, '50041491', 'CARVAO;SUPERATIVADO;RFB-SA1;', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(14, '50041156', 'ELEMENTO FILTR BAG', 'UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(15, '50041298', 'ELEMENTO FILTR;POLIP;5 MIC,BRK30T050BA', 'UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(16, '50310575', 'ELEMENTO FILTR;P/AG;PP;30POL;1 MICRON', 'PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(17, '50008052', 'HIPOCLORITO CALCIO;  TEOR:65PCT;', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(18, '50068490', 'FILTRO;595X595X45MM;G4;F303595X595X45MM', 'UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(19, '50113137', 'OLEO HIDR;234GRC;EMB 20L;ESSO/NUTOH6820L', 'L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(20, '50142873', 'LUBRIFICANTE SEC;ECOLAB/DRYEXXEMB60KG', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(21, '50113223', 'OLEO LUBR;MIN;ENX FOSF;CASTROL/ILOSP220', 'L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(22, '50141217', 'ADITIVO P/LIMP GARRAF;STABILONPLUS67KG', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(23, '50399886', 'LUBRIFICANTE P/ESTEIR;AM;LUBOKLARHHBB60L', 'PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(24, '50142723', 'DETERGENTE;LIQ;EMBAL 69KG;ECOLAB/48331', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(25, '50142884', 'DESINFETANTE;ECOLAB/WHISPERVEMB60KG', 'KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(26, '9999','','SV' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(27, '50005649', 'MICROBICIDA;EST LIQ;NALCO/7330	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(28, '50113466', 'ADITIVO;NALCO;ACTIBROM 7342;ADITIVO;NALC	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(29, '50362875', 'ANTICORROSIVO/ANTI-INCRUSTANTE;BBN 28KG	','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(30, '50142732', 'SABONETE LIQ;LIMAO;AM;ECOLAB/87570','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(31, '50142872', 'LUBRIFICANTE;ECOLAB/LUBODRIVEPSEMB60KG	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(32, '50268447', 'DISPERSANTE;INCOL;NALCO/73551BOMBONA25KG	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(33, '50140966', 'SABONETE CREMOSO;ESP;PH 6-8;ECOLAB/56870','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(34, '50113058', 'SAL;GROSS;SAC 25KG	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(35, '50095594', 'INIBIDOR CORROS;LIQ;NALCO/TRAC10326KG	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(36, '50041172', 'OLEO LUBRIF;IND;COMPRESSOR;REFRI;H68','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(37, '50041089', 'ACIDO;NITRICO;53%	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(38, '50041107', 'HIPOCLORITO SODIO;EST LIQ;BBN 50KG	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(39, '50041402', 'ELEMENTO FILTR;P/LIQ;3M/NB0005EES2C	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(40, '50007749', 'SULFATO DE ZINCO	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(41, '50400169', 'ADITIVO;LIQ;AM;ECOLAB/STABILONWT1000L	','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(42, '50239930', 'ESTABILIZANTE ALIMENTICIO;AC TANICO;PO	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(43, '50008040', 'ACIDO FOSFORICO 85% BOMBONA	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(44, '50041507', 'ELEMENTO FILTR;POLIP;60POL	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(45, '50041296', 'ELEMENTO FILTR;POLIPOPILENO;SWC1M9-4G;;P	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(46, '50113264', 'ELEMENTO FILTR;PFFB10SSFU;;PTFE 10 COM	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(47, '50041514', 'CARVAO ATIVADO;;CLARIMEX CLARISORB - B	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(48, '50041321', 'ELEMENTO FILTR;POLIP;PARKER/SWC5M29GZ	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(49, '50041354', 'ELEMENTO FILTR;POLIP;1 MICRA	','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(50, '50008042', 'SULFATO ALU	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(51, '50113078', 'CARBONATO SODIO;SACO 50 KG;;	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(52, '50422083', 'LUBRIFICANTE P/ESTEIR;LIQ;ECOLAB/66150	','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(53, '50422079', 'LUBRIFICANTE P/ESTEIR;LIQ;ECOLAB/66181	','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(54, '50113151', 'GRAXA;NLGI-2;P/ ALTA TEMPERATURA ATE 300	','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(55, '50113169', 'OLEO LUBRIF INDUST;ENGRENAGEM;FECHADAS E','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(56, '50113177', 'GRAXA;DE LITIO NLGI-EP-2;P/ TEMPERATURAS','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(57, '50113447', 'LUBRIFICANTE;LUBODRIVE PS;SINTETICO 1000','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(58, '50068499', 'ELEMENTO FILTR P/FILTR COALESC;AU15095','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(59, '50468440', 'GRAXA;EMB 1KG;KLUEBER/KLUBERPLEXBEM41132','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(60, '50041092', 'ALCOOL ETIL;TEOR 96GL PH7 INDUSTRIAL','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(71, '50113081', 'POLIMERO;CH 409 CAIXA 24 KG.;;. MASTER Q','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(72, '50113290', 'ADITIVO;SEQUESTRANTE DE OXIGENIO 19V PU','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(73, '50113334', 'NEX GUARD;NALCO 22310;;;Tecnologia para','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(74, '50113326', 'SERVICO;Industr GeBETZ;;','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(75, '50067460', 'QUEROSENE;EMBAL 0,9L','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(76, '50041482', 'ANTIESPUMANTE;LIQ;BBN 10KG;AEB/BATFOAM','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(77, '50113226', 'GRAXA;LATA 25KG;PARALIQ GTE703;;PARALIQ','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(78, '50041338', 'ELEMENTO FILTR;POLIP;5 MICRAS','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(79, '50426733', 'ESTABILIZANTE ALIM;PVPP;POLYCLARENDURE','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(80, '50041422', 'CARVAO ATIV','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(81, '50008688', 'PERMANGANATO POT;POTASSIOTECUNNO1490','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(82, '50113291', 'ADITIVO;Trasar Multifuncional - ref 2023','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(83, '50310865', 'ELEMENTO FILTR BAG;PES;ARO PES;180X810MM','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(84, '50141219', 'ADITIVO P/LIMP GARRAF;STABILONWT63KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(85, '50113117', 'TERRA INFUSORIA;FIBROXCEL 10;;','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(86, '50041342', 'POLICLORETO ALU;A GRAN','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(87, '50113076', 'SULFATO;ALUMINIO;;GRANULADO;SACO;40 KG;;','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(88, '50337075', 'SEIXO ROLADO;SEC;3-6MM','M3' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(89, '50095591', 'HIDROXIDO CALCIO;FUNCAO P/TRATAMENTO AGU','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(90, '50236939', 'CARVAO MINER;TEOR CARB 80PCT;G 0,9-1MM','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(91, '50113413', 'OLEO;P/ALTA TEMPERATURA;INTERFLON FIN LU','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(92, '20025396', 'GRAXA;BAS OLEO SINT;TEMP -50 A 160GRC','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(93, '50400798', 'DETERGENTE;ACID;LIQ;ECOLAB/TRIMETASBB50L','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(94, '50068541', 'ANTIESPUMANTE;LIQ;BAS AG;NALCO/01BZL012','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(95, '50142717', 'DETERGENTE;LIQ;AC-101;ECOLAB/52346','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(96, '50113092', 'OLEO;PARA MONTAGENS SPRAY;.;;;PARALIQ 91','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(97, '50113101', 'OLEO LUBRIF INDUST;ISO 320;200 L;;EGF-','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(98, '50113340', 'GRAXA;EP1;BASE SABAO DE LITIO;;GMA-1EP 2','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(99, '50113406', 'GRAXA;DA SOPRADORA SIDEL SBO 16 12151 20','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(100, '50072949', 'FILTRO;SIDEL/UAD562','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(101, '50113127', 'ADITIVO;NAO IONICO EM EMULSAO;;;5025 NAL','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(102, '50041119', 'AMONIA;CIL 80KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(103, '50008051', 'ACIDO CLORIDR;33PCT','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(104, '50008621', 'OLEO COMB;DIESEL','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(105, '50008361', 'HIPOCLORITO SODIO','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(106, '50394866', 'MANGA;FILT;FILT MANG;BUHLER/UXS29024003','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(107, '50002245', 'PILHA ALC;TAM AA;1,5V;EMBAL C/2 UNID','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(108, '50002244', 'PILHA ALC;TAM AAA;1,5V;EMBAL C/2 UNID','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(109, '50000425', 'OLEO;WATSON-MARLOW/904143','L' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(110, '50141235', 'DESINFETANTE;ECOLAB/OXONIAATIVO150200KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(111, '50306241', 'DESINFETANTE;P/DESINFECCAO SUPERF','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(112, '20025496', 'OLEO LUBRIF;BAS SINT;ISO VG 460;BALD 20L','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(113, '50113275', 'ELEMENTO FILTR;SWC1M30G-SF-S;;POLIPROPIL','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(114, '50113519', 'ELEMENTO FILTRANTE;D/ ALTA VAZAO HF60PP0','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(115, '20025391', 'GRAXA;BAS OLEO MINER;TEMP -20 A 220GRC','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(116, '50142871', 'LUBRIFICANTE;ECOLAB/LUBOKLARHHBR62KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(117, '50141218', 'ADITIVO P/LIMP GARRAF;STABILONPLUS1100KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(118, '50422078', 'LUBRIFICANTE P/ESTEIR;LIQ;ECOLAB/66110','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(119, '20016827', 'PASTA LUBRIF;BEGE;LAT 800G;HKW/ECG60800G','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(120, '50113090', 'S_OLEO;ANTI-CORROSIVO;250 G;;1801 THREEB','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(121, '50113433', 'GRAXA;KLUBERSYNTH UH1 64-1302 EMBALAGEM','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(122, '50141347', 'LUBRIFICANTE;ECOLAB/LUBODRIVEPSEMB200KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(123, '50325586', 'DETERGENTE;LIQ;AM;ECOLAB/TRIMETADUO200L','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(124, '50241796', 'LUBRIFICANTE;HEUFT/HPB200336ST','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(125, '50363692', 'LUBRIFICANTE SEC;HHSDRYLUBESPRAY400ML','PC' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(126, '50307112', 'INIBIDOR CORROS;LIQ;AM;PH 11,5-12,5','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(127, '50307114', 'INIBIDOR INCRUST;LIQ;AMB;PH 4,3-6,3','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(128, '50041165', 'FLOCULANTE;;FLOGARD MS6209;BETZDEARBORN;','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(129, '50141348', 'LUBRIFICANTE SEC;ECOLAB/DRYEXXEMB200KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(130, '50127752', 'VASELINA;SOLIDO;FRASCO 1KG;;4001745 PEND','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(131, '50224590', 'FILTRO;KAESER/7451900010','UN' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(132, '50307318', 'ADITIVO P/AG;ISOTIAZOLONAS;BBN 50KG','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(133, '50439738', 'BIOMASSA;EUCALIP;25TON','TO' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(134, '50008034', 'SEQUESTRANTE O2;;ADITIVO;CORTROL IS-1075','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(135, '50041164', 'ADITIVO;BETZDEARBORN PQ-682;;;;','KG' );
-INSERT INTO `materials` (`id`, `key`, `description`, `uml`) VALUES(136, '50453306', 'INIBIDOR;LIQ;INC;SUEZ/STEAMATENA1321L','KG' );
 
-
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (1,'38870', 'BARE GUARANA PET 2L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (2,'37849', 'PEPSI COLA PET 2L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (3,'51512', 'PEPSI COLA RET REPET 2L SHRINK C/6 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (4,'38866', 'GUARANA CHP ANTARCTICA PET 2L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (5,'38693', 'SUKITA PET 2L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (6,'38853', 'GUARANA CHP ANTARCTICA PET1L CX C/6 NRIO');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (7,'62237', 'BARE GUARANA PET 1L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (8,'51231', 'GUARANA ANT RET REPET 2L SHRINK C/6 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (9,'38868', 'GUARANA CHP ANTARCTICA DIET PET 2L CXC/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (10,'38867', 'SODA LIMONADA ANTARCTICA PET 2L CX C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (11,'38687', 'SUKITA PET 1L CAIXA C/6');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (12,'38833', 'ANTARCTICA SUBZERO LT 350ML SH C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (13,'38790', 'SKOL LT 269ML SH C/15 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (14,'38810', 'BRAHMA CHOPP LT 269ML SH C/15 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (15,'39022', 'ANTARCTICA PILSEN LT269ML SH TR C/15NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (16,'39119', 'BARE GUARANA LATA 350ML CAIXA C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (17,'39054', 'GUARANA CHP ANTART DT LT350ML SH LI C/12');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (18,'39011', 'PEPSI COLA LATA 350ML SH C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (19,'39056', 'SUKITA LATA 350ML SHRINK LISO C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (20,'39055', 'SODA LIMONADA ANTART LT350ML SH LI C/12');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (21,'39057', 'TONICA ANTARCTICA LATA 350ML SH LI C/12');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (22,'39052', 'GUARANA CHP ANTART LT 350ML SH LI C/12 N');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (23,'39053', 'ANTARCTICA PILSEN LT350ML SH LI C/12 NPA');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (24,'51310', 'PEPSI COLA LATA 269ML SH C/15');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (25,'38992', 'SKOL LATA 350ML SH C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (26,'70311', 'SKOL PURO MALTE LT 269ML SH C/15');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (27,'38993', 'BRAHMA CHOPP LATA 350ML SH C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (28,'70310', 'SKOL PURO MALTE LATA 350ML SH C/12 NPAL');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (29,'38703', 'CHOPP BRAHMA CLARO BARRIL KEG 50L');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (30,'38699', 'CHOPP BRAHMA CLARO BARRIL KEG 30L');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (31,'38752', 'SKOL GFA VD 1L 2,99');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (32,'38788', 'ANTARCTICA PILSEN GFA VD 1L C/TTC');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (33,'38777', 'BRAHMA CHOPP GFA VD 1L COM TTC');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (34,'38879', 'ANTARCTICA PILSEN 600ML');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (35,'38713', 'SKOL 600ML');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (36,'38964', 'ORIGINAL ONE WAY 600ML CX 12');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (37,'38883', 'ORIGINAL 600ML');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (38,'38776', 'SKOL ONE WAY 1L CAIX A PAPELAO C/12');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (39,'38715', 'BRAHMA CHOPP 600ML');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (40,'70256', 'SKOL PURO MALTE GFA VD 1L');
-INSERT INTO `products` (`id`, `key`, `name`) VALUES (41,'70255', 'SKOL PURO MALTE 600ML');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38879', 'ANTARCTICA PILSEN 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38788', 'ANTARCTICA PILSEN GFA VD 1L C/TTC', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('43514', 'ANTARCTICA PILSEN GFA VD 300ML CX C/23', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39022', 'ANTARCTICA PILSEN LT269ML SH TR C/15NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38715', 'BRAHMA CHOPP 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('43516', 'BRAHMA CHOPP GFA VD 300ML CX C/23', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('44339', 'BUDWEISER GFA VD 990ML CX C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38699', 'CHOPP BRAHMA CLARO BARRIL KEG 30L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38703', 'CHOPP BRAHMA CLARO BARRIL KEG 50L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38858', 'GUARANA CHP ANTARCTICA 290ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38967', 'GUARANA CHP ANTARCTICA PET 1,5L SH C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38866', 'GUARANA CHP ANTARCTICA PET 2L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38883', 'ORIGINAL 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39011', 'PEPSI COLA LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51512', 'PEPSI COLA PET 2L SH C/6 NPAL RET REPET', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38713', 'SKOL 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('43512', 'SKOL GFA VD 300ML CX 23', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38992', 'SKOL LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39027', 'SKOL LATA 350ML SH C/18 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38790', 'SKOL LT 269ML SH C/15 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38867', 'SODA LIMONADA ANTARCTICA PET 2L CX C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38693', 'SUKITA PET 2L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38810', 'BRAHMA CHOPP LT 269ML SH C/15 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('37849', 'PEPSI COLA PET 2L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51511', 'PEPSI COLA PET 2L SH C/6 NPAL REPET', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38752', 'SKOL GFA VD 1L 2,99', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39000', 'SKOL LT 473ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38861', 'SODA LIMONADA ANTAR MIX BAG IN BOX 18L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39982', 'ANTARCTICA PILSEN LATA 350ML SH C/18 NPA', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38777', 'BRAHMA CHOPP GFA VD 1L COM TTC', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38860', 'GUARANA CHP ANTAR MIX BAG IN BOX 18L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38889', 'GUARANA CHP ANTARCTICA GFA VD 1L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('43138', 'H2OH LIMONETO PET500 SH C/12 NP', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39044', 'ANTARCTICA PILSEN LT 473ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38976', 'H2OH LIMAO C/GAS PET 500ML CAIXA C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39055', 'SODA LIMONADA ANTART LT350ML SH LI C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38993', 'BRAHMA CHOPP LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('46991', 'GUARANA ANTARCTICA BLACK LT 350ML SH C12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38868', 'GUARANA CHP ANTARCTICA DIET PET 2L CXC/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('44541', 'SKOL BARRIL KEG 30L CERV. PILSEN', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39036', 'BRAHMA CHOPP LT 473ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38706', 'CHOPP BRAHMA CLARO BARRIL KEG 10L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39158', 'GUARANA CHP ANTARCTICA OW1L GRFE CX C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38978', 'GUARANA CHP ANTARCTICA PET600ML CXC/12 N', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39119', 'BARE GUARANA LATA 350ML CAIXA C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39052', 'GUARANA CHP ANTART LT 350ML SH LI C/12 N', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39221', 'PEPSI COLA GFA VD 1L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38991', 'ANTARCTICA PILSEN LATA 350ML SH C/12 NPA', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38833', 'ANTARCTICA SUBZERO LT 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38979', 'GUARANA CHP ANTART DIET PET600ML CX C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('43140', 'PEPSI COLA ONE WAY 1L GRFE CX C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('44927', 'ANTARCTICA LATA 350ML SH C/12 NPAL PRECI', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39053', 'ANTARCTICA PILSEN LT350ML SH LI C/12 NPA', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39199', 'BUDWEISER LATA 350ML CX CARTAO C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38984', 'SUKITA PET 600ML CX C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39043', 'BRAHMA FRESH 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38696', 'PEPSI COLA MIX BAG IN BOX 18L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39002', 'GUARANA CHP ANTARCT DIET LT350ML SHC/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38964', 'ORIGINAL ONE WAY 600ML CX 12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38708', 'PEPSI COLA 284ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39005', 'SUKITA LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38862', 'GUARANA CHP ANT DIET MIX BAG IN BOX 18L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38977', 'H2OH LIMAO C/GAS PET 1,5L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39003', 'SODA LIMONADA ANTAR LT350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38970', 'PEPSI COLA PET 1,5L  CX C/06', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('44306', 'SKOL LT 269ML CX CARTAO C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39001', 'GUARANA CHP ANTARCT LT350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39057', 'TONICA ANTARCTICA LATA 350ML SH LI C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('45244', 'BRAHMA CHOPP LT 350ML SH C/12 NPAL PREC', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39007', 'TONICA ANTARCTICA LT 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38832', 'ANTARCTICA SUBZERO 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38911', 'PEPSI TWIST PET 2L SHRINK C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38949', 'GUARANA CHP ANTARCTICA PET 2,5L CX C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38948', 'PEPSI COLA PET 2,5L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39009', 'PEPSI TWIST LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39054', 'GUARANA CHP ANTART DT LT350ML SH LI C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38870', 'BARE GUARANA PET 2L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38719', 'GUARANA CHP ANTARCTICA PET 3,3 L SH C/04', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38720', 'PEPSI COLA PET 3,3 L SH C/04', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51232', 'GUARANA CHP ANT PET 2L SH C/6 NPAL REPET', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39056', 'SUKITA LATA 350ML SHRINK LISO C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39051', 'BRAHMA FRESH LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51231', 'GUARANA CHP ANT PET 2L SHC/6 NPL RET REP', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38935', 'SUKITA MIX BAG IN BOX 18L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38985', 'SODA LIMONADA ANTARCTICA PET600ML CXC/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39207', 'ANTARCTICA SUBZERO LT 269ML SH C/15 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38698', 'CHOPP BRAHMA ESCURO BARRIL KEG 30L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('45242', 'SKOL LATA 350ML SH C/12 NPAL PREC 1', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('45243', 'SKOL LATA 350ML SH C/12 NPAL PREC 2', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38729', 'SUKITA UVA PET 2L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38776', 'SKOL ONE WAY 1L CAIX A PAPELAO C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39211', 'SKOL ONE WAY 300ML CX PAPELAO C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51232', 'GUARANA CHP ANT PET 2L SH C/6 NPAL REPET', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39051', 'BRAHMA FRESH LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51231', 'GUARANA CHP ANT PET 2L SHC/6 NPL RET REP', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39207', 'ANTARCTICA SUBZERO LT 269ML SH C/15 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38698', 'CHOPP BRAHMA ESCURO BARRIL KEG 30L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('45242', 'SKOL LATA 350ML SH C/12 NPAL PREC 1', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('45243', 'SKOL LATA 350ML SH C/12 NPAL PREC 2', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38776', 'SKOL ONE WAY 1L CAIX A PAPELAO C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39211', 'SKOL ONE WAY 300ML CX PAPELAO C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39132', 'ANTARCTICA SUBZERO GFA VD 1L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51232', 'GUARANA ANT OW REPET 2L SHRINK C/6 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51511', 'PEPSI COLA OW REPET 2L SHRINK C/6 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51512', 'PEPSI COLA RET REPET 2L SHRINK C/6 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51231', 'GUARANA ANT RET REPET 2L SHRINK C/6 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('48183', 'BUDWEISER LATA 269ML CX C/8 FRIDGE PACK', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('39203', 'ANTARCTICA PILSEN ONE WAY 300ML CX C/12', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('62237', 'BARE GUARANA PET 1L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38853', 'GUARANA CHP ANTARCTICA PET1L CX C/6 NRIO', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('65623', 'BRAHMA CHOPP LATA 350ML SH 18 MULTIPACK', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38688', 'BRAHMA CHOPP LN355ML SIX PACK CAIXA C/4', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38687', 'SUKITA PET 1L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('65758', 'BUDWEISER OW 330ML CX C 24', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('67167', 'SKOL HOPS LT 269ML CX CARTAO C/8 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('66282', 'SKOL LT 269ML CX C/12 FRIDGE PACK', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('64066', 'SKOL LONG NECK 275ML SIX PACK CX 04', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('68741', 'GUARANA CHP ANTAR LATA 350ML SH C18 MULT', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70975', 'SKOL LT 269ML SH C/15  MULTPACK 15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('64439', 'SKOL LATA 350ML CX CARTÃO C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38945', 'PEPSI COLA PET 1L CAIXA C/6', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38874', 'CHOPP ANTARCTICA BARRIL KEG 30L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('68604', 'PEPSI COLA PET 3000 ML C/04 SH LISO.', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('67384', 'GUARANA CHP ANTARCTICA PET 3L C4 SH LISO', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('68604', 'PEPSI COLA PET 3000 ML C/04 SH LISO.', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51331', 'GUARANA CHP ANTARCTICA LT 269ML SH C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('68262', 'SKOL HOPS LATA 350ML CX CARTAO C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('51310', 'PEPSI COLA LATA 269ML SH C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70311', 'SKOL PURO MALTE LT 269ML SH C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70932', 'SKOL PURO MALTE LN 275ML SIX PACK CX 04', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70256', 'SKOL PURO MALTE GFA VD 1L', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70255', 'SKOL PURO MALTE 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70252', 'SKOL PURO MALTE GFA VD 300ML CX C/23', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70977', 'BRAHMA CHOPP LT 269ML SH C/15 MULTPACK', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38908', 'BOHEMIA NOVA EMBALAGEM 600ML', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('38995', 'BOHEMIA NOVA EMBAL LT 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('70310', 'SKOL PURO MALTE LATA 350ML SH C/12 NPAL', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('77357', 'BUDWEISER LN 330ML SP SH C 4 MULTPACK', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('72583', 'BOHEMIA LT 269ML SH C/15', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('77139', 'SKOL PURO MALTE LATA 269ML SH C/15 MULT', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('62557', 'OURO FINO CERVEJA LT354ML SHC12 NPAL EXP', 'REFRI');
+INSERT INTO `products` (`key`, `name`, `category`) VALUES ('79069', 'OURO FINO CERVEJA LT269ML SH C15 NPA EXP', 'REFRI');
+
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Ácidos Líq','Ácidos Líq-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Acidos para Fermento ','Acidos para Fermento -Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Ácidos Sól','Ácidos Sól-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Aditivos Líq','Aditivos Líq-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Aditivos Sól','Aditivos Sól-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Acidos Liquidos Agua ','Acidos Liquidos Agua -Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua - Acidos Sólidos','Agua -Acidos Sólidos - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua - Aditivos Sólidos','Agua -Aditivos Sólidos - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua - Carvão','Agua -Carvão - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua Detergentes Solidos ','Agua Detergentes Solidos - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua Elementos Filtrantes','Agua Elementos Filtrantes- Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Agua - Sanitizantes','Agua -Sanitizantes -  Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Antiespumante de Cerveja ','Antiespumante de Cerveja -Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Carvão MIP','Carvão MIP-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Clarificante Fine','Clarificante Fine- Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Clarificante Mosto','Clarificante Mosto - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Cloração MIP','Cloração MIP - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Elementos Filtrantes ','Elementos Filtrantes  Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Deterg. Líq','Deterg. Líq-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Deterg.Sól','Deterg.Sól-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Estab. Ácido Tânico','Estab. Ácido Tânico - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Mip Erro Classif','Mip Erro Classif-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Quimicos de Utilidades','Quimicos de Utilidades - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Quimicos de Processo','Quimicos de Processo - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('PVPP Descartável','PVPP Descartável-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('PVPP Regenerável','PVPP Regenerável-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Quimicos ETA/ETEI','Quimicos ETA/ETEI - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Sabáo Lubr.Silic','Sabáo Lubr.Silic-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Sabão Lubr.Sól','Sabão Lubr.Sól-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Sanitizantes MIP','Sanitizantes MIP-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Silica','Silica - Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Soda Cáustica Sól','Soda Cáustica Sól-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Terra Infusória','Terra Infusória-Val $');
+INSERT INTO `cbz` (`name`, `name_sap`) VALUES('Elementos Filtrantes MIP','Elementos Filtrantes MIP- Val $');
+
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20007163', 'DESENGRAXANTE;SINTETIC;LIQUIDO;TAMBOR 20','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50007495', 'ALGINATO PROPILENO GLICOL;KIMILOID BF;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50012817', 'SOLVENTE P/LIMP.COD.;ML 70 ZS BP20;MIXIN','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041408', 'CASCA;DE ARROZ BIOMASSA P/ QUEIMA EM CAL', 'TO');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041437', 'GRAXA;BALD 48KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50054210', 'OLEO CORT;INSOLUV;TAPMATIC/N1LATA500ML', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50054334', 'OLEO LUBRIF;P/INDUSTRIA;DESENGRIP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50087745', 'GRAXA;USO IND;BALD 20KG;KLUEBER/GA343', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50087770', 'OLEO LUBRIF P/COR;UNIMOLYCHAINSPRAY300ML', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113360', 'GRAXA;POLYREX EM;BALDE 16KG;;11783 4 MOB', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113860', 'GRAXEIRA;PERMA R22 XN 120;;DA ENCHEDORA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50116785', 'LUBRIFICADOR;PERMA C/PARAFUSO;P/ TRANS.', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50122360', 'OLEO LUBRIFICANTE INDUST;;;BALDE 20L;;FT','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50132431', 'SOLVENTE P/TINT IMPR;LIQ;VIDEOJET/163401', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50007526', 'ACIDO;FOSFORICO;85%;; CONTAINER', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008040', 'ACIDO FOSFORICO;PUREZ 85PCT;P/ BOMBONA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008011', 'GRAXA;GR NLGI2 BASE:COMP ALUM 20-120 GRC', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008051', 'ACIDO CLORIDR;33PCT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041087', 'ACIDO CLORIDR;BBN 50KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041089', 'ACIDO;NITRICO;53%', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041487', 'COCO;BABACU', 'TO');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041499', 'CAVACO MAD;BIOMASSA 50PCT;A GRAN', 'TO');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041518', 'GRAXA;BALD 16KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041541', 'OLEO LUBRIF;SINTETICO','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041575', 'OLEO LUBRIF;SINT;PAO;GL 19KG;TOTAL/SH100', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068538', 'OLEO LUBRIF SINTETICO;KLUEBER/SUMMITR200','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50078260', 'OLEO;KHS/0301142010740','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50095594', 'INIBIDOR CORROS;LIQ;NALCO/TRAC10325KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113062', 'S_ACIDO;Nitrico;P/A;Bombona;50 KG;;S S.', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113395', 'GRAXA;LIQUIDA HHS2000 EMBALAGEM 500ML WU', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113407', 'GRAXA;DA SOPRADORA SIDEL SBO 16 12151 20', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113408', 'GRAXA;DA SOPRAD;UH114-151KLUBERSYNTH20', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113413', 'OLEO;P/ALTA TEMPERATURA;INTERFLON FIN LU','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113432', 'GRAXA;KLUBERSYNTH UH1 14-31 EMBALAGEM C/', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113434', 'GRAXA;STABUTHERM GH 461 EMBALAGEM C/ 1KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113442', 'GRAXA;LUBRIF;ATOXICA;PARALIQ GTE 703', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113509', 'GRAXA;LWGA 2AL/1,TAMBOR 18KG,SABAO LITIO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50120156', 'GRAXA;CELEROL FL 10  1,0 L FRASCO;;D/ KR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50132429', 'CAVACO MAD;BIOMASSA 30PCT;A GRAN', 'TO');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20003143', 'SILICONE LIQ;INCOL;SPR 250ML;3M/SILTRADE', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20016493', 'PANO P/LIMP;MICROFIBRA;AZ;CX C/288 UNID', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20028037', 'DESENGRAXANTE;LIQ;ADHETECH/LIMOTECH5L', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50004370', 'OLEO DESENGRIPANTE;SPRAY:300G;LOC', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50004673', 'LIMPADOR SUPERF;CONT ELET;LIQ;AER 300ML', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50007236', 'ADITIVO;EST LIQ;CLARO;DIVERSEY/DIVOLE','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008362', 'ADITIVO;P/ACIDO/SOLDA;UNILEVER','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041243', 'PEROXIDO H2;TEOR 35PCT','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50063948', 'ADESIVO VED;SILASTIC732RTV280GBISNAGA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50064977', 'OLEO CORT;SINTETICO;TAPMATIC/QUIMATICN01','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50065035', 'GRAXA;PONT GOT 120GRC;LAT 1KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50095019', 'GRAXA;BALD 20KG;MOBIL/MOBILUXEP220KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50095593', 'GRAXA;BAS SAB LIT;CART;ESSO/UNIREXN3', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50109109', 'OLEO;BREDEL/902143', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50127531', 'REMOVEDOR;P/LIMPEZA ROLAMENTO/ENGRENAGEM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50127752', 'VASELINA;SOLIDO;FRASCO 1KG;;4001745 PEND', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50138079', 'GRAXA;BASE SINTETICA;BISNAGA 400G;090275', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142884', 'DESINFETANTE;ECOLAB/WHISPERVEMB60KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50236204', 'GRAXA;KRONES/0902813059', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50236519', 'FLUIDO LIMP CONT;INFLAM;ARKLOTHENE500ML', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50239008', 'GRAXA;INTERLUB/INTERGREASETEMPLEXB800MG2', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50241681', 'OLEO LUBRIF P/COR;INTEROILCADTEXHT320', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50258968', 'OLEO;KRONES/0902813203', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50259760', 'OLEO;KRONES/0903139410','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50261299', 'GRAXEIRA;KRONES/0903088789', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50261699', 'GRAXA;HEUFT/HPB200397ST', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50280738', 'OLEO BIODIESEL;SOJA;A GRAN', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50310865', 'ELEMENTO FILTR BAG;PES;ARO PES;180X810MM', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50316104', 'SOLVENTE P/LIMP;82GRC;BBN 5L', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50322546', 'DESENGRAXANTE;BONDMANN/BDLIMPTEC1005L', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50322665', 'DESUMIDIFICADOR;LIQ;BONDMANN/BDPROTEC5L', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20020508', 'BIOCIDA;LIQ;NALCO/PERMACLEANPC11PLUS', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001420', 'ADITIVO;EST LIQ;INCOL;DIVERSEY/DIVOAI', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001604', 'ALCALINIZANTE;LIQ;OPTISPERSEPO554750KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001605', 'ADITIVO P/AG;BBN 50KG;GE/SPECTRUSNX1106', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001607', 'ADITIVO;ECOLAB/STABILON PLUS', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50005649', 'MICROBICIDA;EST LIQ;NALCO/7330', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50005802', 'ADITIVO;EST LIQ;DIVERSEY/FWBA0AU009200KG','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50006289', 'INIBIDOR INCRUST;BETZDEARBORN/AEC3107', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008015', 'ADITIVO;P/ACIDO/SOLDA;KOMPLEE/KOMP', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008016', 'ADITIVO P/LIMP GARRAF;EST LIQ','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008034', 'SEQUESTRANTE O2;;ADITIVO;CORTROL IS-1075', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041090', 'ADITIVO;SOD CAUSTIC;UNILEVER/DIVO660', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041164', 'ADITIVO;BETZDEARBORN PQ-682;;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041165', 'FLOCULANTE;;FLOGARD MS6209;BETZDEARBORN;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041259', 'ADITIVO ;SAFE KLOR KLEEN;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041345', 'ADITIVO;FOSF', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041346', 'ADITIVO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041347', 'ADITIVO;EST LIQ', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041348', 'ADITIVO;EST LIQ', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041427', 'FLOCULANTE;SAC 25KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113063', 'ADITIVO;P3 STABILON WT;.;;;PARA SODA A E', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113064', 'ADITIVO;STEAMATE NA-0560;.;;;STEAMATE NA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113065', 'ADITIVO;OPTISPERSE SP-8440;Bombona;100 K', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113072', 'S_ADITIVO;INIBIDOR CORROSAO;Bombona;60 K', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113120', 'ADITIVO;ANTIESPUMANTE PARA SODA CAUSTICA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113123', 'ADITIVO;CONTINUUM AEC 3110;;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113127', 'ADITIVO;NAO IONICO EM EMULSAO;;;5025 NAL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113130', 'ADITIVO;OPTISPERSE AP-4655;A.P.H.4;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113131', 'ADITIVO;SPECTRUS BD-1500;;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113150', 'ADITIVO;PARA SODA CAUSTICA;DIVO ULTRA;;D', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113243', 'ADITIVO;KLARAID PC1222; BOMBONA;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113251', 'ADITIVO;INIBIDOR CORROSAO SISTEMAS CORS', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113252', 'ADITIVO GARANTE A INTEGR. EMB. FOODPRO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113253', 'ADITIVO;RETIRADA DE FERRUGEM GARRAFAS;SU', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113284', 'ADITIVO;ANTI INCRUSTANTE;HIPERPERSE MDC-', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113290', 'ADITIVO;SEQUESTRANTE DE OXIGENIO -REF PU', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113291', 'ADITIVO;Trasar Multifuncional - ref 2023', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113299', 'KLEEN;AC9505;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113334', 'NEX GUARD;NALCO 22310;;;Tecnologia para', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113355', 'FLOCULANTE;IFLOC P507-3;CIBA;SACO;3 KG;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113466', 'ADITIVO;NALCO;ACTIBROM 7342;ADITIVO;NALC', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113531', 'AGENTE DECLORADOR BetzDearborn DCL30;;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50133493', 'FLOCULANTE;POLIFLOC AE1115P;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50134491', 'ADITIVO;POLIMERO;POLYFLOC CP1600;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141216', 'ADITIVO;EST LIQ;STABILONPLUSEMB222KG','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141218', 'ADITIVO P/LIMP GARRAF;STABILONPLUS1100KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141219', 'ADITIVO P/LIMP GARRAF;STABILONWT63KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307112', 'INIBIDOR CORROS;LIQ;AM;PH 11,5-12,5', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307113', 'INIBIDOR CORROS;LIQ;RS;PH 11,5;BBN 20KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307114', 'INIBIDOR INCRUST;LIQ;AMB;PH 4,3-6,3', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307115', 'INIBIDOR CORROS;LIQ;AMB ESC;PH 2,5-3,5', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20004836', 'ACIDO;SULFURICO;98%;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041335', 'CARVAO;ATIVADO;DENSIDADE 0,45-0,55', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041491', 'CARVAO;SUPERATIVADO;RFB-SA1;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041514', 'CARVAO ATIVADO;;CLARIMEX CLARISORB - B', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113526', 'CARVAO ANTRACITO 0,8 A 1,0 MM;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008323', 'DETERGENTE;GEL;P/LIMP MAOS;DIVERSEY', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041099', 'DETERGENTE;ACIDO;TASKI CLONET;;TASKI CLO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041113', 'DETERGENTE;LIQ;P/PISOS/CARRETILHAS', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041159', 'DETERGENTE;GEL ACIDO;ACIGEL;;ACIGEL UNIL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041161', 'DETERGENTE;ALC CLORADA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041162', 'DETERGENTE;ALC', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041193', 'DETERGENTE;LIMPEZA DE MAO;SUMA SEPT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041269', 'DETERGENTE;P/DESENGORD ALL CLEAN', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041494', 'DETERGENTE;LIQ;CONT 1150KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041525', 'DETERGENTE;DIVOSAN OHD_N;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113060', 'DIVOSHEEN BRUSPRAY ACIDO;LIQUIDO;BOMBONA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113512', 'Real - Agente para limpeza de membranas', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50124100', 'DETERGENTE;RENOX,R 100,COR VERDE,ASPECTO','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141236', 'DESINFETANTE;AC;ECOLAB/ADVANTIS13060KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142713', 'DETERGENTE;LIQ LIMPIDO;ECOLAB/85183', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142717', 'DETERGENTE;LIQ;AMB TRANS;ECOLAB/52346', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142718', 'DETERGENTE;NEUTR;LIQ;AM;ECOLAB/84581', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142719', 'DETERGENTE;AC;LIQ;INCOL;ECOLAB/75783', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142720', 'DETERGENTE;AC;LIQ;INCOL;ECOLAB/75781', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142721', 'DETERGENTE;AC;LIQ;INCOL;ECOLAB/75710', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142722', 'DETERGENTE;ALC;LIQ;AM;ECOLAB/77481', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142723', 'DETERGENTE;LIQ;EMBAL 69KG;ECOLAB/48331', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142724', 'DETERGENTE;LIQ TURVO;ECOLAB/44081', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50227696', 'DETERGENTE;LIQ;ECOLAB/STABICIPOXIEMB60KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50306219', 'DETERGENTE;ALC;LIQ LIMPIDO;P/LIMP CIP', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50306241', 'DESINFETANTE;P/DESINFECCAO SUPERF', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008584', 'ELEMENTO FILTR;3M/PFS020A02CA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041144', 'FILTRO SAC', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041152', 'CARTUCHO FILTR;CUNO LATINA/AU09Z11NG120', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041153', 'ELEMENTO FILTR;3M/G78B21TCUNO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041155', 'FILTRO SAC', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041156', 'ELEMENTO FILTR BAG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041183', 'CARTUCHO FILTR;CUNO LATINA/451151390H', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041187', 'FILTRO;F30/1 595X295X45MM;FILTRACOM;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041188', 'ELEMENTO FILTR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041295', 'ELEMENTO FILTR;POLIP;1MICRON', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041296', 'ELEMENTO FILTR;POLIPOPILENO;SWC1M9-4G;;P', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041298', 'ELEMENTO FILTR;POLIP;5 MIC,BRK30T050BA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041302', 'ELEMENTO FILTR;POLIP;5 MICRONS', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041321', 'ELEMENTO FILTR;POLIP;PARKER/SWC5M29GZ', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041328', 'MANTA FILTRANTE;TRAN.AEREO WSR-500/3FAJ8', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041330', 'ELEMENTO FILTR;POLIP;5 MICRAS;BRK39T050N', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041333', 'FILTRO;;;FILTRACOM;595X595X95 MM;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041338', 'ELEMENTO FILTR;POLIP;5 MICRAS', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041354', 'ELEMENTO FILTR;POLIP;1 MICRA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041392', 'ELEMENTO FILTR;P/AG;CLEAN/AQK31CA010', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041393', 'ELEMENTO FILTR;P/AG;CLEAN/BRK19T050NN', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041394', 'ELEMENTO FILTR;P/AG;CLEAN/BRK40T050CA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041395', 'ELEMENTO FILTR;P/AG;3M/CA70CARVAOATIVO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041402', 'ELEMENTO FILTR;P/LIQ;3M/NB0005EES2C', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041403', 'ELEMENTO FILTR;3M/GB0025EE732BAGSERIEG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041404', 'ELEMENTO FILTR;POLIP;3M/AU05Z11NG120', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041405', 'ELEMENTO FILTR;P/AG;3M/NT20T100SONG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041449', 'CARTUCHO FILTR;CUNO LATINA/Z16DD70H', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041450', 'CARTUCHO FILTR;CUNO LATINA/Z16DD90H', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041507', 'ELEMENTO FILTR;POLIP;60POL', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041594', 'ELEMENTO FILTR BAG;FELT POLIP;ARO POLIP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041595', 'ELEMENTO FILTR BAG;FELT POLIP;ARO POLIP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50048382', 'FILTRO;FLEETWOOD/10100100020', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50049496', 'FILTRO;MAGNONI/A502MO0112', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50050181', 'ELEMENTO;TECH FILTER/V0307000000032', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068490', 'FILTRO;595X595X45MM;G4;F303595X595X45MM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068499', 'ELEMENTO FILTR P/FILTR COALESC;AU15095', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068504', 'FILTRO;P/AR;FILTRACOM/F302495X495X45MM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068515', 'ELEMENTO FILTR CART;ALG;CUNO/DCCSY4', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068516', 'ELEMENTO FILTR CART;CUNO/XL30PP010B2A', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068525', 'CARTUCHO P/FILTR;3M/BA045A04BA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50071441', 'FILTRO;ANGELUS/F0029H614AAAI3', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50071442', 'ELEMENTO;ANGELUS/F0029H614AAAJ0', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50072949', 'FILTRO;SIDEL/UAD562', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50077313', 'FILTRO;SIDEL/MGA5FMO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50087015', 'FILTRO;SASIB/120090', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50087016', 'FILTRO;SASIB/120089', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50095544', 'ELEMENTO FILTR;DONALDSON/1C125456MFP0730', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113111', 'CARTUCHO FILTR;3M/NT40T030SOCA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113132', 'PLACA FILTR;ZETA PLUS 70H;;;45115-13-70H', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113133', 'PLACA FILTR;ZETA PLUS 40H;;;45115-13-40H', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113152', 'FILTRO;FS-15P 12X12 ;FILTRACOM;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113244', 'FILTRO;PPK 30BA0030;CUNO;;NT30T030SOBA C', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113248', 'FILTRO;.;CONEXAO CO;25 MICRAS TUB.ENTRAD', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113264', 'ELEMENTO FILTR;PFFB10SSFU;;PTFE 10`` COM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113265', 'ELEMENTO FILTR;PFFB10STCU;;PTFE 10`` COM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113267', 'ELEMENTO FILTR;PFFB20SSFU;;PTFE 20`` COM', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113273', 'ELEMENTO FILTR;SWC1M20G;;POLIPROPILENO B', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113275', 'ELEMENTO FILTR;SWC1M30G-SF-S;;POLIPROPIL', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113277', 'ELEMENTO FILTR;SWC1M40G-SF-S;;POLIPROPIL', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113285', 'ELEMENTO FILTR;SWC1M29-4G;;POLIPROPILENO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113292', 'MANTA FILTRANTE;FIBRA SINT;410x1.500 mm;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113335', 'ELEMENTO FILTRANTE;BETAFINE-XL;ALT-30 ;P', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113369', 'ELEMENTO FILTRANTE;MEMBRANA MO;NYLON 66;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113423', 'ELEMENTO FILTRANTE;TIPO MANGA;M100 154U', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113438', 'ELEMENTO FILTRANTE;POLINETY POLIPROPILEN', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113439', 'ELEMENTO FILTRANTE;POLIPROPILENO PLISSAD', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113443', 'PRE-FILTRO;MEIO FILTRANTE EM MANTAS DE F', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113519', 'ELEMENTO FILTRANTE;D/ ALTA VAZAO HF60PP0', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50118913', 'FILTRO;477 X531 X50 MM;;DO AR CONDICIONA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50119331', 'FILTRO;95% GRAVIMETRICO NT2;;DO TRANSPOR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50133344', 'ELEMENTO FILTRANTE;MALHA 100 P/ FILTRO 1', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50136461', 'Tecido filtr Metso  1980x1980x8,0mm;;;;',' M');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008044', 'SANITIZANTE;UNILEVER/DIVOQUARTFORTE', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041234', 'DETERGENTE;DIVOSAN DIVOQUAT FORTE;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141234', 'DESINFETANTE;ECOLAB/OXONIAATIVO15020L', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141235', 'DESINFETANTE;ECOLAB/OXONIAATIVO150200KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142891', 'DETERGENTE;LIQ;ECOLAB/LIKBESPECIAL68KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041482', 'ANTIESPUMANTE;LIQ;BBN 10KG;AEB/BATFOAM', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50138772', 'CARVAO ATIVADO CG1;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113059', 'CLARIFICANTE CERVEJA;BIOFINE;;P19 KERRY', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008333', 'FLOCULANTE;WHIRLFLOC T QUEST', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008052', 'HIPOCLORITO CALCIO;  TEOR:65PCT;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008361', 'HIPOCLORITO SODIO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041107', 'HIPOCLORITO SODIO;EST LIQ;BBN 50KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041108', 'HIPOCLORITO SODIO;EST LIQ;GRAN', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041247', 'CLORO;PASTILHA;BALDE;. KG;;ELGICID BIOC', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041368', 'HIPOCLORITO SODIO;12PCT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041369', 'HIPOCLORITO SODIO;12PCT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50095591', 'HIDROXIDO CALCIO;FUNCAO P/TRATAMENTO AGU', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041184', 'SABAO IND LIQ;FR 2L;DIVERSEY/SUMASEPT','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50066341', 'DETERGENTE;LIQ LIMPIDO;AM;BBN 20L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20002357', 'DETERGENTE;LIQ;BR;DIVERFOAMDGBOMBONA63KG','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001614', 'DETERGENTE;DIVERFOAMCABOMB60KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008041', 'DETERGENTE;DIVOSHEEN2;PASCAL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50136440', 'SULFATO DE ALUMINIO;P/ TRAT AGUA ;LIQUID','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50239930', 'ESTABILIZANTE ALIMENTICIO;AC TANICO;PO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20000390', 'FITA ZEBRADA ISO PP;AM/PT;3M/H0001918830', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20000552', 'PROTETOR AURIC TP PLUG;MULTIPLAST/CA5745', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20000564', 'OCULOS SEG;POLI;CARBOGRAFITE/012228512', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20000770', 'BONE;BRIM;AZ MAR;TAM UNIC;C', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20000943', 'TAPETE SEG;COR BR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20001091', 'LUVA SEG;NITRILICA NITRAFASE;PUNHO 7CM;P', 'PAR');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20002483', 'ESPONJA LIMP;DU FACE GR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20002882', 'CAMISA;BRIGADA;VM;TAM M;MC;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20005535', 'LUVA SEGURANCA;TAM XG;DANNY/DA301CSTAMXG', 'PAR');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20005542', 'DETERGENTE;LIQ;TASKIP OF AMONIACADO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20007374', 'SUETER P/FRIO;MALHA;AZUL MARINHO;TAM G;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20007726', 'ALCOOL;70%;LIQUIDO;FRASCO 1LT;;91090339', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009307', 'CALCA;OPERADOR BRANCA,C/FAIXA REFLETIV G', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009310', 'CALCA;MANUTENCAO AZUL,C/FAIXA REFLETIV G', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009312', 'CAMISA;MANUTEN. AZUL C/FAIXA REFLETIVA M', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009314', 'CALCA;OPERADOR BRANCA,C/FAIXA REFLETIV M', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009315', 'CAMISA;OPERADOR BRAN C/FAIXA REFLETIVA P', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009317', 'CAMISA;MANUTEN. AZUL C/FAIXA REFLETIVA G', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009318', 'CALCA;MANUTENCAO AZUL,C/FAIXA REFLETIV M', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20009320', 'CAMISA;OPERADOR BRA. C/FAIXA REFLETIVA M', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('20016720', 'ACIDO FOLICO;FUNC ANAL;ECOSYNTH/29362911', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001344', 'LAMPADA UV MODELO GOLD-L AQUAFINE', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041093', 'ALCOOL ETIL;TEOR 96GL FRASCO 1 L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50057741', 'ELEMENTO FILTR;400X75MM;FAOW/BSA3358CAP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50084494', 'ELEMENTO FILTRANTE;MYCOM/117354019', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50092992', 'ADESIVO INST;ETIL CIANOACR;HENKEL/401', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50108337', 'GAS REFRIGERANTE;R-22;BOTIJAO 13,62KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50132163', 'MEMBRANA;DA VALV KEOFITT;MOD W9;600252', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50234217', 'FILTRO;P/AR;FILTRACOM/F30S520X520X45MM', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50256365', 'ELEMENTO;XAROPARIA;ZIEMANN;899050033227', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50259034', 'BURETA GRAD;CL A;100ML;UNION/37010010', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307318', 'ADITIVO P/AG;ISOTIAZOLONAS;BBN 50KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50307330', 'INIBIDOR CORROS;LIQ;AM;PH 1,3-2,3', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50310575', 'ELEMENTO FILTR;P/AG;PP;30POL;1 MICRON', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50000425', 'OLEO;WATSON-MARLOW/904143','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001612', 'OLEO LUBRIF;PETROBRAS/LUBRAXEGF1500PS20L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001613', 'OLEO LUBRIF;MINER;LAT 20L;SHELL/6888','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001625', 'OLEO LUBRIF;BALD 20L;SHELL/MORLINA22020L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001631', 'OLEO LUBRIF;PETROBRAS/LUBRAXEGF460PS','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50006355', 'OLEO LUBRIF;TAMB 200L;SHELL/TELLUS46','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008621', 'OLEO COMB;DIESEL','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008641', 'GAS LIQUEF PETROLEO GLP GRANEL INDUSTRIA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041102', 'GAS BUTANO;APRESENTACAO:EMBALAGEM 196G', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041111', 'ALCOOL ETILICO ; FRASCO 1L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041119', 'AMONIA;CIL 80KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041127', 'OLEO LUBRIF AUTOMOT;P/COMPR AR;ISO 220','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041128', 'VASELINA;EST SOLID;LAT 1KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041129', 'OLEO LUBRIF AUTOMOT;P/ENGR;SAE 90','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041167', 'GRAXA;USO LUBRICANTE;170 KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041172', 'OLEO LUBRIF;IND;COMPRESSOR;REFRI;H68','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041173', 'OLEO LUBRIF;BALD 20L;PETROBRAS/FP150','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041175', 'OLEO LUBRIF;TAMB 200L;ESSO/NUTOH150','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041177', 'GRAXA LUBRIF;ATOXICA;KLUBERSYNTH VH1 141', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041194', 'GRAXA;USO LUBRIF', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041197', 'GRAXA;USO LUBRIF', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041220', 'LUBRIFICANTE; DA BOMBA PERISTALTICA','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041238', 'GRAXA;BAS SINTET;BALD 15,8KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041249', 'GRAXA LUBRIF;CENTOPLEX 2 EP PARA MULTIPL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041270', 'OLEO LUBRIF;AD50','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041271', 'OLEO LUBRIF;PNEUMATICO ISO 10','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041303', 'GRAXA;TEMPERATURA 750G', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041311', 'OLEO LUBRIF;FUCHS/TRIBOTECFNSPRAY400ML', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041312', 'OLEO LUBRIF;KLUEBER/HOTEMP2000300ML', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041317', 'GRAXA LUBRIF;WH2 POLYLUB;1KG;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041320', 'OLEO LUBRIF;CASSIDA GL 220', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041435', 'OLEO LUBRIF;TAMB 208L;MOBIL/120417','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041441', 'OLEO LUBRIF;MOBIL/MOBILGEAR600XP220MOBIL','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041448', 'GRAXA;USO ALIM;BAS SAB CALC', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041498', 'CAVACO MAD;BIOMASSA', 'TO');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041510', 'OLEO LUBRIF;20 L; Klüberoil 4 UH 1-150 N','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041574', 'OLEO LUBRIF;P/CORR DE TR;SINTETICO','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041591', 'OLEO LUBRIF;BALD 20L;MOBIL/SHCCIBUS460', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041593', 'OLEO LUBRIF','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041609', 'OLEO LUBRIF;20L;SHELL/TONNA22020L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50058636', 'FILTRO COALESC', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50063451', 'ELEMENTO FILTRANTE;ULTRAFILTER/PSS0525', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50067460', 'QUEROSENE;EMBAL 0,9L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068488', 'QUEROSENE;LAT 5L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068489', 'VASELINA;SOLID;FR 1KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068491', 'OLEO LUBRIF;SHELL/OMALA320200L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068492', 'OLEO LUBRIF;GARGOYLEARTICSHC226E20L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068495', 'OLEO LUBRIF;BALD 20L;MOBIL/SHC63920L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068501', 'GRAXA;KLUEBER/STABURAGSNBU12300KP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068502', 'GRAXA;LAT 1KG;KLUEBER/CENTOPLEXGLP5001KG', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068509', 'OLEO LUBRIF;BALD 18,9L;MOBIL/SHC629','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068520', 'ÓLEO;ROTO Z;20L;ATLAS COPCO;2908850101', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068521', 'OLEO;GAL30L;ATLAS COPCO/2901052200J','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068523', 'OLEO;ATLAS COPCO/1901055534','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068544', 'OLEO LUBRIF;GL 20L;MOBIL/120700','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068548', 'OLEO LUBRIF;BALD 20L;KLUEBER/UH16460','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068550', 'OLEO LUBRIF;BALD 20L;KLUEBER/UH16220','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068551', 'OLEO DESENGRIP;STARRETT/M1215', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068552', 'OLEO LUBRIF;LUBRAX;EGF100;PS20L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113066', 'SOLVENTE;AGUARRAZ;LATA;5 L;;EMBALAGEM 5','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113085', 'GRAXA LUBRIF;;20 KG;;Alvania EP 00 SHELL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113086', 'GRAXA LUBRIF;SABAO DE LITIO;20 KG;;GMA2-', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113090', 'S_OLEO;ANTI-CORROSIVO;250 G;;1801 THREEB', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113092', 'OLEO;PARA MONTAGENS SPRAY;.;;;PARALIQ 91', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113100', 'S_GLICERINA;LIQUIDO;Frasco;1 L;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113101', 'S_OLEO LUBRIF INDUST;ISO 320;200 L;;EGF-','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113108', 'OLEO;PARALIQ P40; 250ML;;Cassida Chain S','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113109', 'OLEO;LUBRIFICANTE PERMA;;OLEOPERMA FISCH','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113110', 'S_SOLVENTE;PARA CONTATOS ELETRICOS;;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113113', 'S_OLEO HIDRAULICO;SISTEMAS HIDRAULICOS;T','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113137', 'OLEO LUBRIF;IND;SISTEMA;HIDRAUL;HR68EP','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113139', 'GRAXA LUBRIF;ALIMENTICIA GA 343;19 KG;;G', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113144', 'OLEO LUBRIF INDUST; HIDRAULICO; 32  EP','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113149', 'GRAXA LUBRIF;GRAU ALIMENTICIO;750G;;PARA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113151', 'GRAXA;NLGI-2;P/ ALTA TEMPERATURA ATE 300', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113156', 'OLEO;LUBRIF INDUST SHC 226E MOBIL;;;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113161', 'OLEO LUBRIF INDUST;MOTOR DIESEL;ISO 40;A','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113167', 'OLEO LUBRIF INDUST;TURBINAS;ISO 150;OTR','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113169', 'OLEO LUBRIF INDUST;ENGRENAGEM;FECHADAS E','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113177', 'GRAXA;DE LITIO NLGI-EP-2;P/ TEMPERATURAS', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113179', 'OLEO LUBRIF INDUST;COMPRESSORES;DE REFRI','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113181', 'OLEO LUBRIF;IND;SIST;HIDR;HYDRA XP 100','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113205', 'GRAXA LUBRIF;ISOFLEX NBU15 KLUBER;;;9305', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113212', 'SOLVENTE;P/COLA EXP 355/01;;;;EXP 355/01','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113214', 'OLEO LUBRIF INDUST;SISTEMA HIDRAULICO;IS','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113216', 'OLEO LUBRIF INDUST;COMPRESSORES;ISO 100;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113222', 'OLEO LUBRIF INDUST;TURBINAS;ISO 46;OTR 4','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113223', 'OLEO LUBRIF INDUST;ENGRENAGEM;FECH;220;;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113224', 'OLEO;LUBRIF INDUST VG68 MOB;HIDRAULI','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113225', 'GRAXA;COMPLEXO DE LITIO NLGI-2;P/ ALTA T', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113229', 'QUEROSENE;EMBAL 1L','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113232', 'OLEO;LUBRIFICANTE INDUST;TRANSPORTE;68 A','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113233', 'OLEO;LUBRIF P/ BOMBA PERISTALTICA VERDER','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113255', 'GRAXA;USO ALIM;1KG;KLUEBER/UH1141600', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113298', 'OLEO LUBRIF;400ML;KLUEBER/PARALIQP40','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113324', 'OLEO;LUBRIFICANTE SINTETICO GARGOYLE ARC','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113326', 'SERVICO;Industr GeBETZ;;', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113340', 'GRAXA;EP1;BASE SABAO DE LITIO;;GMA-1EP 2', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113346', 'OLEO;LUBRIF INDUSTRIAL P/ ENGRENAGEM;BAL', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113418', 'OLEO LUBIFICANTE;DE ENGRENAGENS E MANCAI','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113433', 'GRAXA;KLUBERSYNTH UH1 64-1302 EMBALAGEM', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113475', 'SAL MOIDO FINO N.IODADO; RES. XAR. SIMP.', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113482', 'OLEO;SPRAY 582, 400ML;;582. GLEITMO','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113518', 'OLEO;SINTETICO MYCOLD AB-68 - EMBALAGEM','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113525', 'AREIA FILTRANTE 0,4 A 0,9 MM;', 'M3');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113543', 'GRAXA LUBRIF;EP1;BASE SABAO LITIO;PONTO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113545', 'OLEO;DESENGRIPANTE;SPRAY 400ML;.;;HOTEMP', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113547', 'GRAXA;;SABAO LITIO;180 GRC ;LATA 18KG;TR', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113548', 'GRAXA;EP2;EP2;BASE SABAO DE LITIO;PONTO', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50124254', 'FILTRO;COALESCENTE,RESIDUAL SOLIDO 0.01U', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50124255', 'FILTRO;COALESCENTE,RESIDUAL SOLIDO 1UM,R', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50127950', 'OLEO;SPRAY 400G;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50131183', 'OLEO LUBRIF;GL 20L;PIERALISI/316194020N','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50136443', 'GRAXA LUBRIF;LUBRAX IID.GAT-2;;;LUBRAX I', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50246433', 'ELEMENTO FILTR;P/CERVEJA;3M/RT30C16G40BA', 'UN');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50281869', 'ELEMENTO FILTR;P/AGUA/CERVEJA;PP;3 MICRA', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50281870', 'ELEMENTO FILTR;P/AG;PP;30POL;0,5MICRA', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50298921', 'CLORETO SODIO;TRATAM AG;GRAN;99,85PCT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008038', 'AMONIA ANIDRA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008688', 'PERMANGANATO POT;POTASSIOTECUNNO1490', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041092', 'ALCOOL ETIL;TEOR 96GL PH7 INDUSTRIAL','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041094', 'ALCOOL ETIL NEUTR;TEOR 96GL','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041109', 'SAL GROSSO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041147', 'ALCOOL ETILICO PH 7,0 IND 96 GL BOMBONA','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041171', 'POLIMERO CATIONIC SINTETICO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041353', 'SULFATO ALU;EST SOLID', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041423', 'POLIMERO ANIONICO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041424', 'POLIMERO CATIONIC SINTETICO;TRATAM AG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041483', 'CARBONATO SODIO;SAC 25KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50068541', 'ANTIESPUMANTE;LIQ;BAS AG;NALCO/01BZL012', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113246', 'POLIMERO;FLONEX - ETEI  9059 KG.;;FLONEX', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50268268', 'INIBIDOR CORROS;LIQ;TRASARTRAC103AGRANEL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50268269', 'INIBIDOR CORROS;LIQ;NALCO/356BOMBONA25KG', 'PC');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50268447', 'DISPERSANTE;INCOL;NALCO/73551BOMBONA25KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50274895', 'LUBRIFICANTE SEC;DIVERSEY/DICOLUBEVL108', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113135', 'INSETICIDA;FOSFETO ALUM.GASTOXIM A;;;','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113317', 'ESTABILIZANTE;POLYCLAR 10;;POLYCLAR 10 I', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008032', 'ESTABILIZANTE P/BEBIDAS;PVPP', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041425', 'ESTABILIZANTE ALIMENTICIO;PVPP', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113210', 'ESTABILIZANTE;POLYCLAR SUPER R;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008042', 'SULFATO ALU', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041132', 'CLORETO FERRIC;TEOR 40PCT', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041227', 'POLICLORETO;ALUMINIO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041342', 'POLICLORETO ALU;A GRAN', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113067', 'CAL HIDRATADO;PO Ca(OH)2 min. 89% 50 KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113068', 'POLIMERO;CATIONICO - ETEI  FO 4350 SH PO', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113076', 'SULFATO;ALUMINIO;;GRANULADO;SACO;40 KG;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113081', 'POLIMERO;CH 409 CAIXA 24 KG.;;. MASTER Q', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113254', 'DESODORIZADOR;GT425 A PARA TRAT. INDUSTR','L');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113281', 'ANTIESPUMANTE;LIQ;GE BETZ/FOAMTROLAF2051', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113332', 'POLICLORETO;ALUMINIO;ALCALINA;GRANEL;18%', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113333', 'LUBRIFIC ESTEIRA;DRY TECH;;;DRY TECH DIV', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113459', 'LUBRIFIC ESTEIRA;DRY EXX;;;', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141348', 'LUBRIFICANTE SEC;ECOLAB/DRYEXXEMB200KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142873', 'LUBRIFICANTE SEC;ECOLAB/DRYEXXEMB60KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001618', 'LUBRIFICANTE;UNILEVER/DICOLUBED64', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113073', 'LUBRIFIC ESTEIRA;DICOLUBE 300;;DICOLUBE', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113114', 'LUBRIFIC ESTEIRA;LUBOKLAR HH BR;;;;LUBOK', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113115', 'LUBRIFIC ESTEIRA;DICOLUBE BLP;;;;DICOLUB', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113116', 'LUBRIFIC ESTEIRA;DICOLUBE LUJOB;;;;DICOL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113447', 'LUBRIFICANTE;LUBODRIVE PS;SINTETICO 1000', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141346', 'LUBRIFICANTE;ECOLAB/LUBOKLARHHBR205KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50141347', 'LUBRIFICANTE;ECOLAB/LUBODRIVEPSEMB200KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50142872', 'LUBRIFICANTE;ECOLAB/LUBODRIVEPSEMB60KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50306402', 'LUBRIFICANTE;BAS SAB;TAMB 220KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001606', 'DESINFETANTE;DIVERSEY/DIVORSANFORTE30KG', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001624', 'DETERGENTE;BBN 60KG;DIVERSEY/DIVOSANTC86', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50007817', 'SILICA GEL;SOLUC', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008037', 'SODA CAUSTICA;LIQUIDO;A GRANEL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001608', 'TERRA INFUSORIA;HYFLO SUPER CEL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50001616', 'TERRA INFUSORIA;STANDARD SUPER CEL', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008043', 'TERRA INFUSORIA;BH-40', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50008435', 'TERRA DIATOMACEA;ORIGEM IMPORTADA', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50041115', 'TERRA INFUSORIA;PERLIMAX 803', 'KG');
+INSERT INTO `materials` (`key`, `description`, `uml_sap`) VALUES('50113117', 'TERRA INFUSORIA;FIBROXCEL 10;;', 'KG');

@@ -1,4 +1,5 @@
 const versionRoute = require('./version');
+const materialsRoute = require('./materials');
 const feedstockRoute = require('./feedstock');
 const feedstockProcessedRoute = require('./feedstock-processed');
 const feedstockResultsRoute = require('./feedstock-results');
@@ -11,6 +12,7 @@ const contentResultsDataRoute = require('./content-results-data');
 
 const routes = {
   versionRoute,
+  materialsRoute,
   feedstockRoute,
   contentRoute,
   contentProcessedRoute,
