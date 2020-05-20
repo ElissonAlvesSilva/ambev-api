@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `kernel` (
   `key` VARCHAR(10) NOT NULL,
   `address` TEXT DEFAULT NULL,
   UNIQUE KEY(`key`)
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `cost_center` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` VARCHAR(50) DEFAULT NULL,
   `key` VARCHAR(30) NOT NULL,
   UNIQUE KEY(`key`)
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `materials` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -32,13 +32,14 @@ CREATE TABLE IF NOT EXISTS `materials` (
   `uml` VARCHAR(5) DEFAULT NULL,
   `uml_sap` VARCHAR(5) DEFAULT NULL,
   `qty_amount` DOUBLE DEFAULT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `cbz` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `name` TEXT DEFAULT NULL,
-  `name_sap` TEXT NOT NULL
-);
+  `name_sap` TEXT NOT NULL,
+  `name_hash` TEXT DEFAULT NULL
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `materials_cbz` (
   `material_id` INT,
@@ -63,14 +64,14 @@ CREATE TABLE IF NOT EXISTS `mip` (
   FOREIGN KEY(cost_center_id) REFERENCES cost_center(id),
   FOREIGN KEY(user_id) REFERENCES users(id),
   FOREIGN KEY(material_id) REFERENCES materials(id)
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
   `key` INT NOT NULL,
   `name` VARCHAR(255) NOT NULL,
   `category` VARCHAR(20) NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `volume` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -87,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `volume` (
   `resource` VARCHAR(30),
   FOREIGN KEY(kernel_id) REFERENCES kernel(id),
   FOREIGN KEY(product_id) REFERENCES products(id)
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `mip_base` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -102,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `mip_base` (
   `qty_amount` DOUBLE NOT NULL,
   `value_obj` DOUBLE NOT NULL,
   `created_at` DATE NOT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `volume_base` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -118,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `volume_base` (
   `qty_amount` DOUBLE NOT NULL,
   `volume_hl` DOUBLE NOT NULL,
   `resource` VARCHAR(30)
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `mip_result` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -135,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `mip_result` (
   `created_at` DATE NOT NULL,
   `kpi_name` VARCHAR(255) DEFAULT NULL,
   `total` DOUBLE DEFAULT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `volume_result` (
   `id` int PRIMARY KEY AUTO_INCREMENT, 
@@ -154,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `volume_result` (
   `total_pc` DOUBLE DEFAULT NULL,
   `total_qty` DOUBLE DEFAULT NULL,
   `total_hl` DOUBLE DEFAULT NULL
-);
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 /*
   type = 1 Volume PLAN

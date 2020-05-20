@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(5),
       allowNull: true,
     },
+    uml_sap: {
+      type: DataTypes.STRING(5),
+      allowNull: true,
+    },
     qty_amount: {
       type: 'DOUBLE',
       allowNull: true,

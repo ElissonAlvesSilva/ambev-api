@@ -23,7 +23,7 @@ const parserFile = (path) => {
     const result = xlsx.utils.sheet_to_json(workbook.Sheets[sheetList[0]]);
     parseResponse = result;
   } catch (error) {
-    logger(error);
+    logger.error(error);
     parseResponse = {
       error: true,
       message: error,

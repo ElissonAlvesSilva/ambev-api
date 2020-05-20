@@ -1,13 +1,13 @@
 
-const MaterialsService = require('../../services/materials');
+const CBZService = require('../../services/cbz');
 
-const MaterialsBusinesses = {
+const CBZBusinesses = {
   async handle(req) {
     let httpCode = 200;
     let response = '';
 
     const { key } = req.params;
-    response = await MaterialsService.handle(key);
+    response = await CBZService.handle(key);
     if (response.error) {
       httpCode = 500;
       response = {
@@ -27,4 +27,4 @@ const MaterialsBusinesses = {
   },
 };
 
-module.exports = MaterialsBusinesses;
+module.exports = CBZBusinesses;
