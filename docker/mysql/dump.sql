@@ -158,28 +158,20 @@ CREATE TABLE IF NOT EXISTS `volume_result` (
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 /*
-  type = 1 Volume PLAN
+  type = 1 Preço PLAN
   type = 2 Quantidade PLAN
-  type = 3 Preço PLAN
-
+  type = 3 Volume PLAN
+*/
 CREATE TABLE IF NOT EXISTS `cbz_plan` (
   `id` INT PRIMARY KEY AUTO_INCREMENT,
   `type` INT NOT NULL,
+  `category` VARCHAR(30) DEFAULT NULL,
   `year` INT DEFAULT NULL,
-  `month` INT NOT NULL,
+  `month` INT DEFAULT NULL,
   `qty_plan` DOUBLE DEFAULT NULL,
+  `um` VARCHAR(5) DEFAULT NULL,
   `price_plan` DOUBLE DEFAULT NULL,
   `year_plan` DOUBLE DEFAULT NULL,
   `cbz_id` INT DEFAULT NULL,
   FOREIGN KEY(cbz_id) REFERENCES cbz(id)
 );
-
-CREATE TABLE IF NOT EXISTS `cost_effect` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
-  `kernel` VARCHAR(30) DEFAULT NULL,
-  `cbz_category` VARCHAR(255) DEFAULT NULL,
-  `name` TEXT DEFAULT NULL,
-  `result` DOUBLE DEFAULT NULL
-);
-
-*/
