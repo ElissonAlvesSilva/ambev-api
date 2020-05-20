@@ -34,8 +34,9 @@ test: lint mocha
 run:
 	docker-compose exec app sh
 
+## exec a local database inside docker
 exec-database:
-	docker exec -it database /bin/bash
+	docker exec -it database mysql -u ambev -pAmb3v123
 
 ## Version management
 release:
