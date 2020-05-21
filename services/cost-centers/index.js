@@ -5,23 +5,23 @@ const logger = require('../../utils/logger');
 const ResponseError = require('../../utils/error/response-error');
 
 // eslint-disable-next-line camelcase
-const { materials } = require('../../models');
+const { cost_center } = require('../../models');
 
-const upsert = (values, where) => materials
+const upsert = (values, where) => cost_center
   .findOne({ where })
   .then((obj) => {
     if (obj) { // update
       return obj.update(values);
     }
     // insert
-    return materials.create(values);
+    return cost_center.create(values);
   });
 
-const findOne = async (key) => await materials.findOne({ where: { key } });
+const findOne = async (key) => await cost_center.findOne({ where: { key } });
 
-const findAll = async () => await materials.findAll();
+const findAll = async () => await cost_center.findAll();
 
-const material = async (params) => {
+const costCenter = async (params) => {
   const {
     key,
   } = params;
@@ -37,46 +37,46 @@ const material = async (params) => {
     logger.error(error);
     throw new ResponseError({
       code: 0,
-      message: 'Error to create a cbz plan register',
+      message: 'Error to create a cost center register',
     });
   }
 };
 
-const MaterialsService = {
+const CostCenterService = {
   async handle(key) {
-    let materialResponse = '';
+    let costCenterResponse = '';
 
     try {
       if (key) {
-        materialResponse = await findOne(key);
+        costCenterResponse = await findOne(key);
       } else {
-        materialResponse = await findAll(key);
+        costCenterResponse = await findAll(key);
       }
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      costCenterResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return costCenterResponse;
   },
   async create(params) {
-    let materialResponse = '';
+    let costCenterResponse = '';
 
     try {
-      materialResponse = await material(params);
+      costCenterResponse = await costCenter(params);
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      costCenterResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return costCenterResponse;
   },
 };
 
-module.exports = MaterialsService;
+module.exports = CostCenterService;

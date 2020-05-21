@@ -8,14 +8,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    type: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false,
-    },
-    category: {
-      type: DataTypes.STRING(30),
-      allowNull: true,
-    },
     year: {
       type: DataTypes.INTEGER(11),
       allowNull: true,

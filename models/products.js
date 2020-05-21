@@ -16,6 +16,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(255),
       allowNull: false,
     },
+    category: {
+      type: DataTypes.STRING(30),
+      allowNull: false,
+    },
   }, {
     timestamps: false,
     tableName: 'products',

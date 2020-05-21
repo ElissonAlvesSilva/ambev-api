@@ -1,13 +1,13 @@
-const cbz = require('../../businesses/cbz');
+const products = require('../../businesses/products');
 const logger = require('../../utils/logger');
 
-const CBZController = {
+const ProductsController = {
   async handle(req, res, next) {
     try {
-      const data = await cbz.handle(req);
+      const data = await products.handle(req);
       return res.status(data.httpCode).json(data.response);
     } catch (e) {
-      logger.error('CBZ Controller:', e.message);
+      logger.error('Products Controller:', e.message);
       logger.debug(e);
 
       // error handler middleware
@@ -16,10 +16,10 @@ const CBZController = {
   },
   async create(req, res, next) {
     try {
-      const data = await cbz.create(req);
+      const data = await products.create(req);
       return res.status(data.httpCode).json(data.response);
     } catch (e) {
-      logger.error('CBZ Controller:', e.message);
+      logger.error('Products Controller:', e.message);
       logger.debug(e);
 
       // error handler middleware
@@ -28,4 +28,4 @@ const CBZController = {
   },
 };
 
-module.exports = CBZController;
+module.exports = ProductsController;

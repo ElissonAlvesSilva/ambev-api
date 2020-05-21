@@ -24,4 +24,11 @@ router.get(
   CBZController.handle,
 );
 
+router.post(
+  '/',
+  // authMiddleware,
+  // validateMiddleware,
+  CBZController.create,
+);
+
 module.exports = router;

@@ -17,10 +17,35 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
     },
+    kernel_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true,
+      references: {
+        model: 'kernel',
+        key: 'id',
+      },
+    },
+    cost_center_id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: true,
+      references: {
+        model: 'cost_center',
+        key: 'id',
+      },
+    },
   }, {
     tableName: 'users',
     timestamps: false,
   });
+
+  Users.associate = (models) => {
+    Users.belongsTo(models.kernel, {
+      foreign_key: 'kernel_id',
+    });
+    Users.belongsTo(models.cost_center, {
+      foreign_key: 'cost_center_id',
+    });
+  };
 
   return Users;
 };

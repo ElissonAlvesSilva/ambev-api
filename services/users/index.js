@@ -5,23 +5,23 @@ const logger = require('../../utils/logger');
 const ResponseError = require('../../utils/error/response-error');
 
 // eslint-disable-next-line camelcase
-const { materials } = require('../../models');
+const { users } = require('../../models');
 
-const upsert = (values, where) => materials
+const upsert = (values, where) => users
   .findOne({ where })
   .then((obj) => {
     if (obj) { // update
       return obj.update(values);
     }
     // insert
-    return materials.create(values);
+    return users.create(values);
   });
 
-const findOne = async (key) => await materials.findOne({ where: { key } });
+const findOne = async (key) => await users.findOne({ where: { key } });
 
-const findAll = async () => await materials.findAll();
+const findAll = async () => await users.findAll();
 
-const material = async (params) => {
+const user = async (params) => {
   const {
     key,
   } = params;
@@ -37,46 +37,46 @@ const material = async (params) => {
     logger.error(error);
     throw new ResponseError({
       code: 0,
-      message: 'Error to create a cbz plan register',
+      message: 'Error to create a user register',
     });
   }
 };
 
-const MaterialsService = {
+const UsersService = {
   async handle(key) {
-    let materialResponse = '';
+    let userResponse = '';
 
     try {
       if (key) {
-        materialResponse = await findOne(key);
+        userResponse = await findOne(key);
       } else {
-        materialResponse = await findAll(key);
+        userResponse = await findAll(key);
       }
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      userResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return userResponse;
   },
   async create(params) {
-    let materialResponse = '';
+    let userResponse = '';
 
     try {
-      materialResponse = await material(params);
+      userResponse = await user(params);
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      userResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return userResponse;
   },
 };
 
-module.exports = MaterialsService;
+module.exports = UsersService;

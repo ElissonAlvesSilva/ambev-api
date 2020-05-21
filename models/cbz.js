@@ -16,9 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    name_hash: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
   }, {
-    charset: 'utf8',
-    collate: 'utf8_unicode_ci',
     timestamps: false,
     tableName: 'cbz',
   });

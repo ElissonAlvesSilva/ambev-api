@@ -1,17 +1,17 @@
 
-const MaterialsService = require('../../services/materials');
+const CostCenterService = require('../../services/cost-centers');
 
-const MaterialsBusinesses = {
+const CostCenterBusinesses = {
   async handle(req) {
     let httpCode = 200;
     let response = '';
 
     const { key } = req.params;
-    response = await MaterialsService.handle(key);
+    response = await CostCenterService.handle(key);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to get material',
+        message: 'Error to get cost center',
         error: response.message,
       };
       return {
@@ -30,11 +30,11 @@ const MaterialsBusinesses = {
     let response = '';
 
     const { body } = req;
-    response = await MaterialsService.create(body);
+    response = await CostCenterService.create(body);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to create material',
+        message: 'Error to cost center kernel',
         error: response.message,
       };
       return {
@@ -50,4 +50,4 @@ const MaterialsBusinesses = {
   },
 };
 
-module.exports = MaterialsBusinesses;
+module.exports = CostCenterBusinesses;

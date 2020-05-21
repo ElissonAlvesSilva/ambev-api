@@ -1,17 +1,17 @@
 
-const MaterialsService = require('../../services/materials');
+const CBZPlanService = require('../../services/cbz-plan');
 
-const MaterialsBusinesses = {
+const CBZPlanBusinesses = {
   async handle(req) {
     let httpCode = 200;
     let response = '';
 
-    const { key } = req.params;
-    response = await MaterialsService.handle(key);
+    const { year } = req.params;
+    response = await CBZPlanService.handle(year);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to get material',
+        message: 'Error to get cbz plan',
         error: response.message,
       };
       return {
@@ -30,11 +30,11 @@ const MaterialsBusinesses = {
     let response = '';
 
     const { body } = req;
-    response = await MaterialsService.create(body);
+    response = await CBZPlanService.create(body);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to create material',
+        message: 'Error to create cbz plan',
         error: response.message,
       };
       return {
@@ -50,4 +50,4 @@ const MaterialsBusinesses = {
   },
 };
 
-module.exports = MaterialsBusinesses;
+module.exports = CBZPlanBusinesses;

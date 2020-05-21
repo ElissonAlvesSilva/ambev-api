@@ -1,17 +1,17 @@
 
-const MaterialsService = require('../../services/materials');
+const ProductsService = require('../../services/products');
 
-const MaterialsBusinesses = {
+const ProductsBusinesses = {
   async handle(req) {
     let httpCode = 200;
     let response = '';
 
-    const { key } = req.params;
-    response = await MaterialsService.handle(key);
+    const { year } = req.params;
+    response = await ProductsService.handle(year);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to get material',
+        message: 'Error to get product',
         error: response.message,
       };
       return {
@@ -30,11 +30,11 @@ const MaterialsBusinesses = {
     let response = '';
 
     const { body } = req;
-    response = await MaterialsService.create(body);
+    response = await ProductsService.create(body);
     if (response.error) {
       httpCode = 500;
       response = {
-        message: 'Error to create material',
+        message: 'Error to create product',
         error: response.message,
       };
       return {
@@ -50,4 +50,4 @@ const MaterialsBusinesses = {
   },
 };
 
-module.exports = MaterialsBusinesses;
+module.exports = ProductsBusinesses;

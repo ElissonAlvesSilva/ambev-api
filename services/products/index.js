@@ -5,21 +5,21 @@ const logger = require('../../utils/logger');
 const ResponseError = require('../../utils/error/response-error');
 
 // eslint-disable-next-line camelcase
-const { materials } = require('../../models');
+const { products } = require('../../models');
 
-const upsert = (values, where) => materials
+const upsert = (values, where) => products
   .findOne({ where })
   .then((obj) => {
     if (obj) { // update
       return obj.update(values);
     }
     // insert
-    return materials.create(values);
+    return products.create(values);
   });
 
-const findOne = async (key) => await materials.findOne({ where: { key } });
+const findOne = async (key) => await products.findOne({ where: { key } });
 
-const findAll = async () => await materials.findAll();
+const findAll = async () => await products.findAll();
 
 const material = async (params) => {
   const {
@@ -37,46 +37,46 @@ const material = async (params) => {
     logger.error(error);
     throw new ResponseError({
       code: 0,
-      message: 'Error to create a cbz plan register',
+      message: 'Error to create a product register',
     });
   }
 };
 
-const MaterialsService = {
+const ProductsService = {
   async handle(key) {
-    let materialResponse = '';
+    let productResponse = '';
 
     try {
       if (key) {
-        materialResponse = await findOne(key);
+        productResponse = await findOne(key);
       } else {
-        materialResponse = await findAll(key);
+        productResponse = await findAll(key);
       }
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      productResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return productResponse;
   },
   async create(params) {
-    let materialResponse = '';
+    let productResponse = '';
 
     try {
-      materialResponse = await material(params);
+      productResponse = await material(params);
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      productResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return productResponse;
   },
 };
 
-module.exports = MaterialsService;
+module.exports = ProductsService;

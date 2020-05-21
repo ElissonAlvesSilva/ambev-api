@@ -2,7 +2,7 @@ const { Router } = require('express');
 // const { celebrate } = require('celebrate');
 
 // const joiSchema = require('./validation');
-const MaterialsController = require('../../controllers/materials');
+const ProductsController = require('../../controllers/products');
 // const { authMiddleware } = require('../../middlewares/auth');
 
 const router = new Router({ mergeParams: true });
@@ -21,14 +21,14 @@ router.get(
   '/',
   // authMiddleware,
   // validateMiddleware,
-  MaterialsController.handle,
+  ProductsController.handle,
 );
 
 router.post(
   '/',
   // authMiddleware,
   // validateMiddleware,
-  MaterialsController.create,
+  ProductsController.create,
 );
 
 module.exports = router;

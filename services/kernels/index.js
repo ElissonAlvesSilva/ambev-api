@@ -5,23 +5,23 @@ const logger = require('../../utils/logger');
 const ResponseError = require('../../utils/error/response-error');
 
 // eslint-disable-next-line camelcase
-const { materials } = require('../../models');
+const { kernel } = require('../../models');
 
-const upsert = (values, where) => materials
+const upsert = (values, where) => kernel
   .findOne({ where })
   .then((obj) => {
     if (obj) { // update
       return obj.update(values);
     }
     // insert
-    return materials.create(values);
+    return kernel.create(values);
   });
 
-const findOne = async (key) => await materials.findOne({ where: { key } });
+const findOne = async (key) => await kernel.findOne({ where: { key } });
 
-const findAll = async () => await materials.findAll();
+const findAll = async () => await kernel.findAll();
 
-const material = async (params) => {
+const kernels = async (params) => {
   const {
     key,
   } = params;
@@ -37,46 +37,46 @@ const material = async (params) => {
     logger.error(error);
     throw new ResponseError({
       code: 0,
-      message: 'Error to create a cbz plan register',
+      message: 'Error to create a kernel register',
     });
   }
 };
 
-const MaterialsService = {
+const KernelsService = {
   async handle(key) {
-    let materialResponse = '';
+    let kernelResponse = '';
 
     try {
       if (key) {
-        materialResponse = await findOne(key);
+        kernelResponse = await findOne(key);
       } else {
-        materialResponse = await findAll(key);
+        kernelResponse = await findAll(key);
       }
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      kernelResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return kernelResponse;
   },
   async create(params) {
-    let materialResponse = '';
+    let kernelResponse = '';
 
     try {
-      materialResponse = await material(params);
+      kernelResponse = await kernels(params);
     } catch (error) {
       logger.info(error);
-      materialResponse = {
+      kernelResponse = {
         error: true,
         message: error.message,
       };
     }
 
-    return materialResponse;
+    return kernelResponse;
   },
 };
 
-module.exports = MaterialsService;
+module.exports = KernelsService;

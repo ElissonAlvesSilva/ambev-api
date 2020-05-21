@@ -5,6 +5,8 @@ const { applyMiddlewares } = require('./middlewares/index');
 const {
   versionRoute,
   cbzRoute,
+  cbzPlanRoute,
+  productsRoute,
   materialsRoute,
   feedstockRoute,
   feedstockProcessedRoute,
@@ -14,6 +16,9 @@ const {
   contentProcessedRoute,
   contentResultsRoute,
   contentResultsDataRoute,
+  kernelsRoute,
+  costCentersRoute,
+  usersRoute,
 } = require('./routes');
 
 
@@ -25,6 +30,16 @@ app.use('/version', versionRoute);
 app.use('/ambevapi/materials', materialsRoute);
 
 app.use('/ambevapi/cbz', cbzRoute);
+
+app.use('/ambevapi/cbz-plan', cbzPlanRoute);
+
+app.use('/ambevapi/products', productsRoute);
+
+app.use('/ambevapi/kernels', kernelsRoute);
+
+app.use('/ambevapi/cost-centers', costCentersRoute);
+
+app.use('/ambevapi/users', usersRoute);
 
 app.use('/ambevapi/feedstock', feedstockRoute);
 

@@ -1,13 +1,13 @@
-const cbz = require('../../businesses/cbz');
+const kernels = require('../../businesses/kernels');
 const logger = require('../../utils/logger');
 
-const CBZController = {
+const KernelsController = {
   async handle(req, res, next) {
     try {
-      const data = await cbz.handle(req);
+      const data = await kernels.handle(req);
       return res.status(data.httpCode).json(data.response);
     } catch (e) {
-      logger.error('CBZ Controller:', e.message);
+      logger.error('Kernels Controller:', e.message);
       logger.debug(e);
 
       // error handler middleware
@@ -16,10 +16,10 @@ const CBZController = {
   },
   async create(req, res, next) {
     try {
-      const data = await cbz.create(req);
+      const data = await kernels.create(req);
       return res.status(data.httpCode).json(data.response);
     } catch (e) {
-      logger.error('CBZ Controller:', e.message);
+      logger.error('Kernels Controller:', e.message);
       logger.debug(e);
 
       // error handler middleware
@@ -28,4 +28,4 @@ const CBZController = {
   },
 };
 
-module.exports = CBZController;
+module.exports = KernelsController;
