@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "d0180046-f968-458c-bf5f-d12c4e601a9e",
+		"name": "AMBEV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Feedstock file process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mip",
+							"type": "file",
+							"src": "/Users/elisson/Downloads/MIP_REGCO (1).XLS"
+						},
+						{
+							"key": "name",
+							"value": "mip",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/feedstock",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"feedstock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reprocess Mip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mip",
+							"type": "file",
+							"src": "/Users/elisson/Downloads/MIP_REGCO (1).XLS"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/feedstock?reprocess=true&dates=2020-01-04,2020-04-01",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"feedstock"
+					],
+					"query": [
+						{
+							"key": "reprocess",
+							"value": "true"
+						},
+						{
+							"key": "dates",
+							"value": "2020-01-04,2020-04-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Volume file process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "volume",
+							"type": "file",
+							"src": "/Users/elisson/Downloads/ZC_PPLINES (1).XLS"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/content",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReProcess Volume",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "volume",
+							"type": "file",
+							"src": "/Users/elisson/Downloads/ZC_PPLINES (1).XLS"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/content?reprocess=true&dates=04-01-2020,08-01-2020",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"content"
+					],
+					"query": [
+						{
+							"key": "reprocess",
+							"value": "true"
+						},
+						{
+							"key": "dates",
+							"value": "04-01-2020,08-01-2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Processed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/materials",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedstock processed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/cbz",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cbz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get result volume",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/content-results-data/topKernelProductionPerProduct?startDate=2020-04-01",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"content-results-data",
+						"topKernelProductionPerProduct"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2020-04-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ger results data Feedstock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/feedstock-results-data/quantityTotalPerMaterial?startDate=2020-04-01&endDate=2020-04-04",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"feedstock-results-data",
+						"quantityTotalPerMaterial"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2020-04-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2020-04-04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create cbz _lan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"year\": 2020,\n    \"month\": 1,\n    \"um\": \"G\",\n    \"qty_plan\": 15000,\n    \"price_plan\": 1000.50,\n    \"year_plan\": 1008254.4566,\n    \"cbz_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/cbz-plan",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cbz-plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CBZ PLAN ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/cbz-plan/2020",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cbz-plan",
+						"2020"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Materials",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/materials",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE UPDATE MATERIAL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": 50113117,\n        \"description\": \"TERRA INFUSORIA;FIBROXCEL 10;;ASDGASDJGJJGDJASGDGDS\",\n        \"uml\": null,\n        \"uml_sap\": \"KG\",\n        \"qty_amount\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/materials",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"materials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Produtcs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE UPDDATE PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": 7906989,\n        \"name\": \"TESTE\",\n        \"category\": \"CERVEJA\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/products",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CBZ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/cbz",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cbz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRETE UPDADATE CBZ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"adasdasdasdasd\",\n        \"name_sap\": \"adsdasddasdasda\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/cbz",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cbz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET KERNELS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/kernels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"kernels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE UPDATE KERNEL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"key\": \"BRV40\",\n        \"address\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/kernels",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"kernels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET COST CENTERs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/cost-centers",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cost-centers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE UPDATE COST CENTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"kernel_id\": 1,\n        \"key\": \"BR070T1346\",\n        \"address\": \"aaaaaaa\",\n        \"kernelId\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/cost-centers",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"cost-centers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/ambevapi/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE UPDATE USERS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"TESTE\",\n        \"key\": \"99733330111\",\n        \"kernel_id\": 1,\n        \"cost_center_id\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/ambevapi/users",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ambevapi",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
